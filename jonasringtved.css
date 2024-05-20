@@ -203,6 +203,7 @@ h1 {
 
 .event-tekst-container, h3 {
     margin-top: 2.5em;
+    font-weight: 600;
 }
 
 .event-tekst-container, p {
