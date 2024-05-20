@@ -206,9 +206,6 @@ ul {
     cursor: pointer;
 }
 
-.menupunkt i {
-    display: none;
-}
 
 .dropdown {
     position: absolute;

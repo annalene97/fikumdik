@@ -21,7 +21,7 @@ function menuAktiv () {
     }
 }
 //Visning af dropdown-menuer (og efterfølgende luk)
-menupunkt.forEach(menupunkt => { //Vi kalder parametert "menupunkt"i vores arrow funktion, så vi ved det er for hvert menupunkt 
+/* menupunkt.forEach(menupunkt => { //Vi kalder parametert "menupunkt"i vores arrow funktion, så vi ved det er for hvert menupunkt 
     menupunkt.addEventListener('click', () => { // Vi sætter eventlistener på hvert menupunkt.
         const clickedSubmenu = menupunkt.querySelector('.dropdown'); //Her henter vi dropdown-menuerne og kalder dem "ClickedSubmenu"
         if (clickedSubmenu) {
@@ -30,8 +30,30 @@ menupunkt.forEach(menupunkt => { //Vi kalder parametert "menupunkt"i vores arrow
             clickedSubmenu.style.display = (clickedSubmenu.style.display === 'block') ? 'none' : 'block'; // Hvis det er sandt, at, submenuen er synling (block), ændres værdien til 'none'; ellers ændres værdien til 'block' (Dette er en kort if/else statement)
 
             const ikon = menupunkt.querySelector('i');
-            ikon.classList.toggle('fa-plus');
-            ikon.classList.toggle('fa-minus');
+            ikon.classList.toggle('fa-chevron-down');
+            ikon.classList.toggle('fa-chevron-up');
+        }
+    });
+}); */
+
+menupunkt.forEach(menupunkt => {
+    menupunkt.addEventListener('click', () => {
+        const clickedSubmenu = menupunkt.querySelector('.dropdown');
+        if (clickedSubmenu) {
+            // Toggle submenu display
+            const erAaben = clickedSubmenu.style.display === 'block';
+            lukAndreSubmenuer(clickedSubmenu);
+            clickedSubmenu.style.display = erAaben ? 'none' : 'block';
+            
+            // Toggle icon class
+            const ikon = menupunkt.querySelector('i');
+            if (erAaben) {
+                ikon.classList.remove('fa-chevron-up');
+                ikon.classList.add('fa-chevron-down');
+            } else {
+                ikon.classList.remove('fa-chevron-down');
+                ikon.classList.add('fa-chevron-up');
+            }
         }
     });
 });
@@ -39,9 +61,14 @@ menupunkt.forEach(menupunkt => { //Vi kalder parametert "menupunkt"i vores arrow
         // Function to close all submenus except the one passed as an argument
         function lukAndreSubmenuer(clickedSubmenu) { 
             const dropdown = document.querySelectorAll('.dropdown');
-            dropdown.forEach(submenu => { // 
+            dropdown.forEach(submenu => { 
                 if (submenu !== clickedSubmenu) { // Her tjekker scriptet hvilken dropdownmenu vi klikker på - Scriptet går igennem alle dropdownmenuer. Dem, der ikke klikkes på ændres til display:none
                     submenu.style.display = 'none';
+                    const ikon = submenu.closest('.menupunkt').querySelector('i');
+                    if (ikon) {
+                        ikon.classList.remove('fa-chevron-up');
+                        ikon.classList.add('fa-chevron-down');
+                    }
                 }
             });
         }
