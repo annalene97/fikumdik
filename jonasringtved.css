@@ -168,6 +168,19 @@ h1 {
     margin: 20px;
 }
 
+.illustration-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#plek {
+}
+
+#viser {
+    margin-top: 10rem;
+}
+
+
 .maps-container {
     margin: 20px;
     display: flex;
