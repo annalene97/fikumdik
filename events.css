@@ -146,12 +146,16 @@ ul {
     font-size: 0.9em;
 }
 
-h1 {
-    display: flex;
+h1 { /* EVENT titel */
     color: var(--roed);
-    font-size: large;
+    margin-top: 1em;
+    font-size: 2em;
     text-align: center;
 }
+
+
+
+
 
 
 
