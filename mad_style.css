@@ -1,3 +1,6 @@
+/* -------------------
+     Mad & Drikke 
+---------------------*/
 .mad_flexbox_container{
     margin-left: 7%;
     margin-right: 7%;
@@ -33,11 +36,24 @@
     padding-bottom: 10%;
 }
 
-.mad_knap{
+/* Billede knap */
+.mad_img_knap{
     max-width: 50%;
     margin-bottom: 3%;
+    filter: drop-shadow(5px 5px 5px var(--morkblaa));
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
 }
 
+.mad_img_knap:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+
+/* håndskrevet tekst med pile */
 #mad_haandskrift_1{
     max-width: 30%;
     margin-top: 10%;
@@ -47,7 +63,24 @@
 
 #mad_haandskrift_2{
     max-width: 35%;
-    margin-left: 65%;
-    margin-top: 5%;
+    margin-left: 75%;
+    margin-top: -5%;
     margin-bottom: -8%;
+}
+
+/* MODALER */
+.mad_modal{
+    display: ;
+    padding: 10%;
+    position: fixed;
+    z-index: 1;
+    left: 40%;
+    top: 50%;
+    border: 5 solid var(--morkblaa);
+    background-color: var(--lyssand);
+}
+
+/* Menukort styling */
+#menukort{
+    filter: drop-shadow(5px 5px 5px var(--morkblaa));
 }

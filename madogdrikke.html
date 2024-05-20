@@ -80,7 +80,10 @@
                     og vi udvælger dem med omhug. Ret lækre ting hvis vi selv skal sige det.</h4>
             </div>
 
-            <!--kaffe knapper -->
+            <!--------------------------
+                KNAPPER TIL KAFFEMODAL
+            ---------------------------->
+            <!-- kaffe afsnit -->
             <div class="mad_flexbox_sektion">
 
                 <!-- Klik på mig -->
@@ -90,11 +93,26 @@
 
                 <!-- Knap kaffe-->
                 <div class="mad_flexbox_modal_kaffe">
-                    <img class="mad_knap" src="img/knapper/kaffe.png" alt="Kaffe">
+                    <button class="mad_img_knap">
+                        <img src="img/knapper/kaffe.png" onclick="window.open" alt="Kaffe">
+                    </button>
                 </div>
             </div>
 
-            <!-- bagværk knapper -->
+            <!-- KAFFE MODAL -->
+            <div class="mad_modal">
+                <div class="mad_modal_indhold">
+                    Hej
+                    <img src="img" alt="">
+                </div>
+                <!-- Lukkefunktion -->
+                <i class="bx bx-x" id="mad_modal_luk"></i>
+            </div>
+
+            <!----------------------------
+                KNAPPER TIL BAGVÆRKMODAL
+            ------------------------------>
+            <!-- bagværk afsnit -->
             <div class="mad_flexbox_sektion">
 
                 <!-- Eller klik på mig-->
@@ -104,14 +122,16 @@
 
                 <!-- Knap bagværk -->
                 <div class="mad_flexbox_modal_bagvaerk">
-                    <img class="mad_knap" src="img/knapper/bagvark.png" alt="Bagværk">
+                    <button class="mad_img_knap">
+                        <img src="img/knapper/bagvark.png" alt="Bagværk">
+                    </button>
                 </div>
             </div>
 
 
             <!-- menukort -->
             <div class="mad_flexbox_sektion">
-                <img src="img/mad&drikke/menukort.png" alt="Fikumdiks Menukort ">
+                <img id="menukort" src="img/mad&drikke/menukort.png" alt="Fikumdiks Menukort ">
             </div>
 
         </div>
