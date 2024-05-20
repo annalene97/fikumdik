@@ -70,15 +70,52 @@
 
 /* MODALER */
 .mad_modal{
-    display: ;
-    padding: 10%;
+    display: block; /* sæt display:none */
     position: fixed;
     z-index: 1;
-    left: 40%;
-    top: 50%;
-    border: 5 solid var(--morkblaa);
+    top: 5%;
+    right: 2%;
+    left: 2%;
     background-color: var(--lyssand);
+    width: 90%;
+    height: 68%;
+    border-radius: 5%;
+    border: 3px solid var(--morkblaa);
 }
+
+
+.mad_modal_overskrift_box{
+    background-color: var(--roed);
+    z-index: -1;
+    width: 50%;
+
+}
+
+.mad_modal_overskrift{
+    color: var(--lyssand);
+    text-align: center;
+    padding: 5%;
+    font-size: 1em;
+}
+
+.mad_modal_img{
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    opacity: 0.75;
+}
+
+.mad_modal_tekst{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 8%;
+}
+
+.mad_modal_illustration{
+    max-width: 40%;
+  /* FÅ POSITIONERET DEN */
+}
+
+
 
 /* Menukort styling */
 #menukort{
