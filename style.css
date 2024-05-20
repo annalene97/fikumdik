@@ -35,25 +35,31 @@ body {
     font-family: "Jost", sans-serif;
 }
 
-h1 {
-    font-size: 5em;
+h1 { /* Bruges til over-overskrift */
+    font-size: 1.8em;
     font-weight: 700;
 }
 
-h2 {
-    font-size: 1.7em;
-    font-weight: 700;
-}
-
-h3 {
+h2 { /* Bruges til underoverskrift */
     font-size: 1.4em;
     font-weight: 600;
+}
+
+h3 { /* knap */
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+h4 { /* introducerende brødtekst */
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: 400;
 }
 
 p {
     font-size: 1em;
     line-height: 1.5em;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 a {
@@ -156,6 +162,26 @@ ul {
 -------------------- */
 
 @media screen and (min-width: 768px){
+    h1 { /* Bruges til over-overskrift */
+        font-size: 2.5em;
+    }
+    
+    h2 { /* Bruges til underoverskrift */
+        font-size: 1.5em;
+    }
+    
+    h3 { /* knap */
+        font-size: 1.2em;
+    }
+    
+    h4 { /* introducerende brødtekst */
+        font-size: 1.1em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+
 
 /* -------------------- 
 --------- FORSIDE --------
