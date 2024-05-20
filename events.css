@@ -157,11 +157,10 @@ h1 { /* EVENTS titel */
 }
 
 .event-container { /*EN CONTAINER FOR ALLE EVENT-KORTENE*/
-    display: flex;
-    margin-top: 1.5em;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
     gap: 15px;
-
+    padding: 20px;
 }
 
 .event-kort {
@@ -169,7 +168,7 @@ h1 { /* EVENTS titel */
     width: 150px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px black);
+    box-shadow: 0 1px 4px grey;
 }
 
 .event-image {
