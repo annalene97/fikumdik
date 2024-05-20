@@ -47,7 +47,7 @@ h2 { /* Bruges til underoverskrift */
     font-weight: 600;
 }
 
-h3 { /* knap */
+button { /* knap */
     font-size: 1.1em;
     font-weight: 500;
 }
