@@ -162,7 +162,20 @@ h1 {
     text-align: center;
 }
 
+.kunstner-dato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
 
+.dot {
+    height: 7px;
+    width: 7px;
+    background-color: var(--roed);
+    border-radius: 50%;
+    display: inline-block;
+}
 
 .spotify-container {
     margin: 20px;
