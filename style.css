@@ -197,7 +197,7 @@ ul {
 
 
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px){ /* Bruges kun til menulinjen */
 /* -------------------- 
 --------- MENU --------
 ----------------------- */
@@ -233,7 +233,6 @@ ul {
 .menupunkt:hover {
     cursor: pointer;
 }
-
 
 .dropdown {
     position: absolute;
