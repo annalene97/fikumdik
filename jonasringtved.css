@@ -186,9 +186,6 @@ h1 {
     grid-template-columns: 50% 50%;
 }
 
-#plek {
-}
-
 #viser {
     margin-top: 10rem;
 }
@@ -199,6 +196,20 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
+.event-tekst-container {
+    margin: 1.5em;
+}
+
+.event-tekst-container, h3 {
+    margin-top: 2.5em;
+}
+
+.event-tekst-container, p {
+    margin-top: 1.5em;
+    font-weight: 400;
+}
+
 
 
 
