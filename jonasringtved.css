@@ -6,7 +6,7 @@
     padding: 0;
   }
   
-img, picture, video, canvas, svg {
+img, video, svg {
     display: block;
     max-width: 100%;
   }
@@ -35,25 +35,33 @@ body {
     font-family: "Jost", sans-serif;
 }
 
-h1 {
-    font-size: 5em;
+h1 { /* Bruges til over-overskrift */
+    font-size: 1.5em;
     font-weight: 700;
+    text-align: center;
+    color: var(--roed);
 }
 
-h2 {
-    font-size: 1.7em;
-    font-weight: 700;
-}
-
-h3 {
-    font-size: 1.4em;
+h2 { /* Bruges til underoverskrift */
+    font-size: 1.3em;
     font-weight: 600;
+}
+
+h3 { /* knap */
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+h4 { /* introducerende brødtekst */
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: 400;
 }
 
 p {
     font-size: 1em;
     line-height: 1.5em;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 a {
@@ -147,75 +155,7 @@ ul {
 }
 
 
-/*START AF EVENTS SIDEN*/
 
-h1 { /* EVENTS titel */
-    color: var(--roed);
-    margin-top: 1em;
-    font-size: 2em;
-    text-align: center;
-}
-
-.event-container { /*EN CONTAINER FOR ALLE EVENT-KORTENE*/
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 15px;
-    padding: 20px;
-}
-
-.event-kort {
-    position: relative;
-    width: 150px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 1px 4px grey;
-}
-
-
-.event-image {
-    width: 100%;
-    display: block;
-}
-
-.event-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.event-info h2 { 
-    text-transform: uppercase;
-    margin: 0;
-    font-size: 1em;
-}
-
-.event-dato-pris {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--roed);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 8px;
-}
-
-.event-dato-pris, #dato, #pris {
-    font-size: smaller;
-}
-
-.event-dato, #dato { /* DATO FONT SKAL VÆRE BOLD*/
-    font-weight: 600 ;
-}
 
 
 
@@ -224,6 +164,26 @@ h1 { /* EVENTS titel */
 -------------------- */
 
 @media screen and (min-width: 768px){
+    h1 { /* Bruges til over-overskrift */
+        font-size: 2.4em;
+    }
+    
+    h2 { /* Bruges til underoverskrift */
+        font-size: 1.5em;
+    }
+    
+    h3 { /* knap */
+        font-size: 1.2em;
+    }
+    
+    h4 { /* introducerende brødtekst */
+        font-size: 1.1em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+
 
 /* -------------------- 
 --------- FORSIDE --------
@@ -237,7 +197,7 @@ h1 { /* EVENTS titel */
 
 
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px){ /* Bruges kun til menulinjen */
 /* -------------------- 
 --------- MENU --------
 ----------------------- */
@@ -273,7 +233,6 @@ h1 { /* EVENTS titel */
 .menupunkt:hover {
     cursor: pointer;
 }
-
 
 .dropdown {
     position: absolute;
