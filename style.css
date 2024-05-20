@@ -36,14 +36,14 @@ body {
 }
 
 h1 { /* Bruges til over-overskrift */
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-weight: 700;
     text-align: center;
     color: var(--roed);
 }
 
 h2 { /* Bruges til underoverskrift */
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 600;
 }
 

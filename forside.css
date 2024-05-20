@@ -2,3 +2,21 @@ main {
     margin: 1em 0.5em;
 }
 
+.forside_sektion1 {
+    border-bottom: 2px solid var(--morkblaa);
+    padding: 0 0.5em 1em;
+}
+
+.forside_container1_img {
+    display: flex;
+    justify-content: center;
+}
+
+.forside_img_mostera {
+    display: none;
+}
+
+.forside_illustration {
+    height: 100%;
+    max-width: 45%;
+}
