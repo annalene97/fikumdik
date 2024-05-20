@@ -1,0 +1,19 @@
+.mad_flexbox_container{
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.mad_flexbox_sektion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#mad_overskrift{
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+#mad_introtekst{
+    text-align: center;
+}

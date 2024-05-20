@@ -38,6 +38,7 @@ body {
 h1 { /* Bruges til over-overskrift */
     font-size: 1.8em;
     font-weight: 700;
+    text-align: center;
     color: var(--roed);
 }
 
