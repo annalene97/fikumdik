@@ -147,9 +147,10 @@ ul {
 }
 
 h1 {
-    display: center;
+    display: flex;
     color: var(--roed);
-    font-size: medium;
+    font-size: large;
+    text-align: center;
 }
 
 
