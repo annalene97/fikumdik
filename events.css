@@ -146,15 +146,33 @@ ul {
     font-size: 0.9em;
 }
 
-h1 { /* EVENT titel */
+h1 { /* EVENTS titel */
     color: var(--roed);
     margin-top: 1em;
     font-size: 2em;
     text-align: center;
 }
 
+.image-container h2 {
+    color: var(--roed);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: larger;
+}
 
+.image-container #dato {
+    font-size: small;
+    color:
+}
 
+.image-container img{ /* Artists */
+    padding: 15px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
 
 
 
