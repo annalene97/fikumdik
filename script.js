@@ -29,9 +29,9 @@ menupunkt.forEach(menupunkt => { //Vi kalder parametert "menupunkt"i vores arrow
             lukAndreSubmenuer(clickedSubmenu); // Her igangsættes lukAndreSubmenuer-funktionen med ClickedSubmenu som argument (altså en værdi, der spiller ind i eksekveringen)
             clickedSubmenu.style.display = (clickedSubmenu.style.display === 'block') ? 'none' : 'block'; // Hvis det er sandt, at, submenuen er synling (block), ændres værdien til 'none'; ellers ændres værdien til 'block' (Dette er en kort if/else statement)
 
-            const icon = menupunkt.querySelector('i');
-            icon.classList.toggle('fa-plus');
-            icon.classList.toggle('fa-minus');
+            const ikon = menupunkt.querySelector('i');
+            ikon.classList.toggle('fa-plus');
+            ikon.classList.toggle('fa-minus');
         }
     });
 });
