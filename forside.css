@@ -25,3 +25,16 @@ main {
 .forside_p {
     padding: 5% 0;
 }
+
+/* Billede-karrusel */
+.forside_element_img {
+    position: relative;
+    height: 150px;
+    width: 150px;
+}
+
+.forside_element_img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
