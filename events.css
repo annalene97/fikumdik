@@ -187,7 +187,7 @@ h1 { /* EVENTS titel */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--lyssand);
     text-align: center;
     padding: 20px;
 }
@@ -203,7 +203,7 @@ h1 { /* EVENTS titel */
     bottom: 0;
     width: 100%;
     background-color: var(--roed);
-    color: white;
+    color: var(--lyssand);
     display: flex;
     justify-content: space-between;
     padding: 8px;
@@ -237,6 +237,28 @@ h1 { /* EVENTS titel */
         margin-top: 1.5em;
         font-size: 3em;
         text-align: center;
+    }
+
+    .event-kort:hover {
+        transform: scale(1.05); /* DETTE FORSTØRRE KORT VED HOVER */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gør skyggen mørkere og større */
+        transition: 0.5s ease-in-out; /*SÆTTER EN SMOOTH TRANSITION DER VARER 0.5 s */
+    }
+
+    .event-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--lyssand);
+        text-align: center;
+        padding: 20px;
+        font-size: 1.5em; /*SÆTTER NAVN, DATO, PRIS I DEN KORREKTE STØRRELSE*/
     }
 }
 
