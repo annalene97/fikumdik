@@ -1,19 +1,18 @@
 /* CSS RESET */
-
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
   
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
-  }
+}
   
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
-  }
+}
 
 /* -------------------- 
 ------ STYLE KIT ------
@@ -102,8 +101,8 @@ ul {
     color: var(--lyssand);
     display: none;
     transition: all ease-in-out .3s; /* FUNGERER IKKE */
+    z-index: 1000; /*SØRGER FOR DROPDOWN MENU IKKE BLIVER SAT BAGVED CONTENT*/
 }
-
 
 #menu.aktiv { /* Til js */
     display: block;
@@ -115,11 +114,11 @@ ul {
 }
 
 #burger.aktiv .burgerlinje:nth-child(1) {
-    transform: translateY(8px) rotate(45deg)
+    transform: translateY(8px) rotate(45deg);
 }
 
 #burger.aktiv .burgerlinje:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg)
+    transform: translateY(-11px) rotate(-45deg);
 }
 
 /* Styling af menupunkter */
@@ -146,31 +145,32 @@ ul {
     font-size: 0.9em;
 }
 
-
 /*START AF EVENTS SIDEN*/
 
 h1 { /* EVENTS titel */
     color: var(--roed);
-    margin-top: 1em;
+    margin: 1em 0 1em 0;
     font-size: 2em;
     text-align: center;
 }
 
-.event-container { /*EN CONTAINER FOR ALLE EVENT-KORTENE*/
+.event-container { /*EN CONTAINER FOR ALLE EVENT-KORTENE OPSAT I GRID FOR SÆTTE DEM I 2 KOLONNER*/
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 15px;
+    justify-content: center; /*Centrere elementerne*/
+    gap: 1em;
+    row-gap: 2em;
     padding: 20px;
+    margin: 0 auto; /* Centrer containeren */
 }
 
 .event-kort {
     position: relative;
-    width: 150px;
+    width: 100%; /* Fylder hele bredden af kolonnen */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 1px 4px grey;
 }
-
 
 .event-image {
     width: 100%;
@@ -217,97 +217,98 @@ h1 { /* EVENTS titel */
     font-weight: 600;
 }
 
-
-
 /* -------------------- 
 ------ DESKTOP ------
 -------------------- */
+@media screen and (min-width: 768px) {
+    .event-container {
+        grid-template-columns: 30% 30% 30%;
+        justify-content: center;
+        gap: 2.5em;
+        row-gap: 2em;
+        padding: 20px;
+        margin: auto; /*DETTE CENTRERER MIN CONTAINER*/
+        max-width: 1000px; /*SÆTTER EN PASSENDE BREDDE FOR MIN CONTAINER*/
+    }
 
-@media screen and (min-width: 768px){
-
-/* -------------------- 
---------- FORSIDE --------
------------------------ */
-
-
+    h1 { /* EVENTS titel */
+        color: var(--roed);
+        margin-top: 1.5em;
+        font-size: 3em;
+        text-align: center;
+    }
 }
 
+@media screen and (min-width: 1024px) {
+    /* -------------------- 
+    --------- MENU --------
+    ----------------------- */
+    .navbar {
+        height: 5em;
+        position: sticky;
+        box-shadow: 0 1.5em 2em #00000020;
+    }
 
+    #menu {
+        display: flex;
+        position: static;
+        width: auto;
+        gap: 3rem;
+        padding: 0 8em 0 0;
+    }
 
+    #menu.aktiv { /* Til js */
+        display: flex;
+    }
 
+    .menupunkt {
+        border-top: none;
+        padding: 0;
+        font-size: 1em;
+        display: block;
+    }
 
+    .submenu {
+        display: block;
+    }
 
-@media screen and (min-width: 1024px){
-/* -------------------- 
---------- MENU --------
------------------------ */
-.navbar {
-    height: 5em;
-    position: sticky;
-    box-shadow: 0 1.5em 2em #00000020;
-}
+    .menupunkt:hover {
+        cursor: pointer;
+    }
 
-#menu {
-    display: flex;
-    position: static;
-    width: auto;
-    gap: 3rem;
-    padding: 0 8em 0 0;
-}
+    .dropdown {
+        position: absolute;
+        background-color: var(--cyanblaa);
+        padding: 2em 1em 1.5em 1em;
+        border-radius: 0.2em;
+        width: 12em;
+        box-shadow: 0 1.5em 2em #00000020;
+        z-index: -999;
+        margin-left: -1em;
+        transition: all ease 0.5s;
+        display: none;
+    }
 
-#menu.aktiv { /* Til js */
-    display: flex;
-}
+    .submenu:hover .dropdown {
+        display: block;
+        margin-top: 0;
+    }
 
-.menupunkt {
-    border-top: none;
-    padding: 0;
-    font-size: 1em;
-    display: block;
-}
+    .underpunkt {
+        padding: 1em 0 0.2em 0;
+        border-bottom: solid 1px var(--lyssand);
+    }
 
-.submenu {
-    display: block;
-}
+    .underpunkt:nth-child(1) {
+        border-top: solid 1px var(--lyssand);
+    }
 
-.menupunkt:hover {
-    cursor: pointer;
-}
+    #burger {
+        display: none;
+    }
 
-
-.dropdown {
-    position: absolute;
-    background-color: var(--cyanblaa);
-    padding: 2em 1em 1.5em 1em;
-    border-radius: 0.2em;
-    width: 12em;
-    box-shadow: 0 1.5em 2em #00000020;
-    z-index: -999;
-    margin-left: -1em;
-    transition: all ease 0.5s;
-    display: none;
-}
-
-.submenu:hover .dropdown {
-    display: block;
-    margin-top: 0;
-}
-
-.underpunkt {
-    padding: 1em 0 0.2em 0;
-    border-bottom: solid 1px var(--lyssand);
-}
-
-.underpunkt:nth-child(1) {
-    border-top: solid 1px var(--lyssand);
-}
-
-#burger {
-    display: none;
-}
-
-.logo_nav {
-    width: 6em;
-    margin: 0 0 -3em 2em;
-}
+    .logo_nav {
+        width: 6em;
+        margin: 0 0 -3em 2em;
+    }
 }
