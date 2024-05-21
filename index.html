@@ -19,11 +19,14 @@
 
     <!-- Javascript -->
     <script defer src="script.js"></script>
+    <script defer src="forside.js"></script>
 
     <!-- Ikoner -->
     <script src="https://kit.fontawesome.com/848cbc1ae3.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="logo_nav">
             <a href="index.html"><img src="img/logo.png" alt="Fikumdik logo"></a>
@@ -63,9 +66,11 @@
     </nav>
     
     <!-- Video banner-->
-    <video loop autoplay muted src="video/Fikumdik_stemningsvideo.mp4" alt="Stemningsvideo fra Fikumdik">
-            
-    </video>
+    <div class="forside_video_container">
+        <video loop autoplay muted>
+            <source src="video/Fikumdik_stemningsvideo.mp4" alt="Stemningsvideo fra Fikumdik">
+        </video>
+    </div>
 
     <main>
         <section class="forside_sektion1">
@@ -75,55 +80,163 @@
                     <img class="forside_img_mostera forside_illustration" src="img/illustrations/monstera.png" alt="Tegning af en monstera">
                 </div>
                 <h1>VELKOMMEN TIL FIKUMDIK</h1>
-                <h4 class="forside_p"> Her hos Fikumdik huser vi flere forskellige koncepter. Fælles for dem alle er at vi er vilde med fællesskab. Nyd en kop sårt kaffe eller en lækker morgenmad i vores hyggelige Café. Eller deltag i vores tossede events samme sted. Du kan også leje vores haller til din næste fætter/kusine fest eller nyde godt af kontorfællesskabet. <br><br> Vi holder til i de gamle Falck bygninger i Åbyhøj i Aarhus. Her er højt til loftet og plads til alle. Vi synes faktisk selv her er ret hyggeligt, og vi glæder os til at byde dig velkommen.</h4>
-            </div>
-        </section>
-        <!-- Billede karrusel -->
-        <section class="forside_sektion3">
-            <div class="forside_karrusel_indhold">
-                <div class="forside_element">
-                    <span class="forside_billede_overlay">
-                    </span>
-                    <img class="forside_element_img" src="img/forside/karussel_menu.jpg" alt="Billede af menukort">
-                    <!-- måske skal button være i en div -->
-                    <button class="forside_karrusel_knap">MENUKORT</button>
-                </div>
+                <h4 class="forside_p"> Her hos Fikumdik huser vi flere forskellige koncepter. Fælles for dem alle er, at vi er vilde med fællesskab. Nyd en kop sååårt kaffe eller en lækker morgenmad i vores hyggelige café. Eller deltag i vores tossede events samme sted. Du kan også leje vores haller til din næste fætter/kusine fest eller blive en del af kontorfællesskabet. <br><br> Vi holder til i de gamle Falck-bygninger i Åbyhøj. Her er højt til loftet og plads til alle. Vi synes faktisk selv her er ret hyggeligt, og vi glæder os til at byde dig velkommen.</h4>
             </div>
         </section>
 
-       <!--  <section class="forside_sektion3">
-            <div class="forside_karrusel_indhold">
-                <div class="forside_element_wrapper">
-                    <div class="forside_element">
-                        <div class="forside_element_billede">
-                            <span class="forside_billede_overlay">
-                            </span>
-                            <div class="forside_element_img">
-                                <img src="img/forside/karussel_menu.jpg" alt="Billede af menukort">
+<!-- Billede karrusel -->
+        <section class="forside_sektion2">
+            <div class="forside_karrusel_wrapper">
+                <div class="forside_karrusel">
+<!-- Knapper til navigation i karrusel -->
+                    <button id="forside_venstreknap" class="forside_karrusel_knap"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button id="forside_hojreknap" class="forside_karrusel_knap"><i class="fa-solid fa-chevron-right"></i></button>
+<!-- Karrusellen -->
+                    <div class="forside_karrusel_indhold">
+<!-- Billede 1 -->
+                        <div class="forside_element_wrapper">
+                            <div class="forside_element">
+                                <div class="forside_element_overlay">
+                                    <button onclick="window.location.href='madogdrikke.html#menukort'" class="forside_element_knap">MENUKORT</button>
+                                </div>
+                                <img class="forside_element_img" src="img/forside/karussel_menu.jpg" alt="Billede af menukort">
                             </div>
-                        </div> -->
-                        <!-- måske skal button være i en div -->
-                      <!--   <button class="forside_karrusel_knap">MENUKORT</button>
-                    </div>
-                </div>
-
-                <div class="forside_karrusel_element">
-                    <span class="forside_billede_overlay">
-                    </span>
-                    <img class="forside_element_img" src="img/forside/karussel_menu.jpg" alt="Billede af menukort">
-                    </div>
-                    <button class="forside_karrusel_knap">MENUKORT</button>
+                        </div>
+<!-- Billede 2 -->
+                        <div class="forside_element_wrapper">
+                            <div class="forside_element">
+                                <div class="forside_element_overlay">
+                                    <button onclick="window.location.href='events.html'" class="forside_element_knap">EVENTS</button>
+                                </div>
+                                <img class="forside_element_img" src="img/forside/karussel_event.jpg" alt="Billede af event afholdt hos Fikumdik">
+                            </div>
+                        </div>
+<!-- Billede 3 -->
+                        <div class="forside_element_wrapper">
+                            <div class="forside_element">
+                                <div class="forside_element_overlay">
+                                    <button onclick="window.location.href='madogdrikke.html'" class="forside_element_knap">VORES RÅVARER</button>
+                                </div>
+                                <span class="forside_billede_overlay">
+                                </span>
+                                <img class="forside_element_img" src="img/forside/karussel_raavarer.jpg" alt="Billede af ?">
+                            </div>
+                        </div>
+<!-- Billede 4 -->
+                        <div class="forside_element_wrapper">
+                            <div class="forside_element">
+                                <div class="forside_element_overlay">
+                                    <button onclick="window.location.href='bagomfikumdik.html'" class="forside_element_knap">VORES HISTORIE</button>
+                                </div>
+                                <img class="forside_element_img" src="img/forside/karussel_vores_historie.jpg" alt="Billede af ?">
+                            </div>
+                        </div>
+<!-- Billede 5 -->
+                        <div class="forside_element_wrapper">
+                            <div class="forside_element">
+                                <div class="forside_element_overlay">
+                                    <button onclick="window.location.href='fikumdikfavner.html'" class="forside_element_knap">LEJ EN HAL</button>
+                                </div>
+                                <img class="forside_element_img" src="img/forside/karussel_hal.jpg" alt="Billede af ?">
+                            </div>
+                        </div>
+<!-- Billede 6 -->
+                        <div class="forside_element_wrapper">
+                            <div class="forside_element">
+                                <div class="forside_element_overlay">
+                                    <button onclick="window.location.href='fikumdikfavner.html'" class="forside_element_knap">KONTORFÆLLESSKAB</button>
+                                </div>
+                                <img class="forside_element_img" src="img/forside/karussel_kontorfaellesskab.jpg" alt="Billede af kontorfællesskab">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section> -->
-        <!-- FAQ del -->
-        <section class="forside_sektion3">
-            <div class="forside_container2">
-                <img src="img/illustrations/chesterfield.png" alt="Tegning af en chesterfield lænestol">
-                <img src="img/displayfont/harduspoergsmaal.png" alt="Tekst:'Har du spørgsmål?">
-                <div class="forside_faq">
+            
+        </section>
 
+<!-- FAQ del -->
+        <section class="forside_sektion3">
+<!-- Container til illustration of displayfont -->
+            <div class="forside_container2">
+                <img class="forside_illustration" src="img/illustrations/chesterfield.png" alt="Tegning af en chesterfield lænestol">
+                <img class="forside_displayfont" src="img/displayfont/harduspoergsmaal.png" alt="Tekst:'Har du spørgsmål?">
+                <div class="forside_faq_container">
+                    <h2>FAQ</h2>
+                    <div class="forside_faq">
+ <!-- Spørgsmål 1 -->
+                        <div class="forside_faq_element">
+                            <div class="forside_faq_sporgsmaal"> 
+                                <button class="faq_knap">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                                <h3>Hvor mange siddepladser har I?</h3>
+                            </div>
+                            <div class="forside_faq_svar">
+                                <p>Ved os kan du både nyde din købte kaffe indenfor og udendørs. Vi har 60 siddepladser indenfor og 50 siddepladser udendørs.</p>
+                            </div>
+                        </div>
+<!-- Spørgsmål 2 -->                        
+                        <div class="forside_faq_element">
+                            <div class="forside_faq_sporgsmaal"> 
+                                <button class="faq_knap">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                                <h3>Må jeg tage min hund med?</h3>
+                            </div>
+                            <div class="forside_faq_svar">
+                                <p>Din firbenede ven er altid velkommen hos os hvis i finder en god plads udenfor.</p>
+                            </div>
+                        </div>
+<!-- Spørgsmål 3 -->    
+                        <div class="forside_faq_element">
+                            <div class="forside_faq_sporgsmaal"> 
+                                <button class="faq_knap">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                                <h3>Kan jeg studere eller arbejde på Fikumdik?</h3>
+                            </div>
+                            <div class="forside_faq_svar">
+                                <p>På Fikumdik har vi masser af plads og luft omkring bordene. Derfor er det et helt oplagt sted at studere eller arbejde. Derudover har vi selvfølgelig også plads til at oplade diverse devices.</p>
+                            </div>
+                        </div>
+<!-- Spørgsmål 4 -->                        
+                        <div class="forside_faq_element">
+                            <div class="forside_faq_sporgsmaal"> 
+                                <button class="faq_knap">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                                <h3>Hvordan lejer jeg en hal?</h3>
+                            </div>
+                            <div class="forside_faq_svar">
+                                <p>Vi udlejer vores gamle Falck halle til alle livets begivenheder. Det er kun fantasien der sætter grænser for hvad der er muligt! I er velkommen til at kontakte os <span><a href="kontakt.html">her</a></span></p>
+                            </div>
+                        </div>
+<!-- Spørgsmål 5 -->                        
+                        <div class="forside_faq_element">
+                            <div class="forside_faq_sporgsmaal"> 
+                                <button class="faq_knap">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                                <h3>Hvad koster en plads i kontorfællesskabet?</h3>
+                            </div>
+                            <div class="forside_faq_svar">
+                                <p>Vi udlejer både åbne og lukkede kontorpladser, hvor du har mdivighed for at sætte dit eget præg på pladsen. Prisen for åben kontorplads er 1500,- ex moms i måneden. Prisen for en lukket kontorplads er 2200,- ex moms om måneden.</p>
+                            </div>                           
+                        </div>
+<!-- Spørgsmål 6 -->                        
+                        <div class="forside_faq_element">
+                            <div class="forside_faq_sporgsmaal"> 
+                                <button class="faq_knap">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                                <h3>Hvor køber jeg billet til jeres events?</h3>
+                            </div>
+                            <div class="forside_faq_svar">
+                                <p>Se vores mange fede events på linket <span><a href="events.html">her</a></span> Der er link til billetsalg under hvert event</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
