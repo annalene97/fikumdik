@@ -1,14 +1,13 @@
 /* -------------------
      Mad & Drikke 
 ---------------------*/
-.mad_flexbox_container{
-    margin-left: 7%;
-    margin-right: 7%;
-}
 .mad_flexbox_sektion{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 8%;
 }
 #mad_overskrift{
     padding-top: 10%;
@@ -145,7 +144,7 @@
 #mad_bagvaerk_modal{
     display: none; /* sættes til display: block i JS */
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 5%;
     right: 2%;
     left: 2%;
@@ -206,3 +205,42 @@
 #menukort{
     filter: drop-shadow(5px 5px 5px var(--morkblaa));
 }
+
+/*--------------------
+    MEDIA QUERIE
+---------------------*/
+@media screen and (min-width: 1024px) {
+
+    /* forstørret margin i siderne for at indramme content på siden */
+    .mad_flexbox_sektion{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .mad_modalknapper{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding-top: 5%;
+    }
+    
+/*
+    .mad_modalknapper_indhold{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    */
+    
+
+    #mad_kaffeimg_knap{
+        max-width: 30%;
+    }
+
+    #mad_bagimg_knap{
+        max-width: 30%;
+    }
+
+
+
+
+} 
