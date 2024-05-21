@@ -210,6 +210,11 @@ h1 {
 .illustration-container {
     display: grid;
     grid-template-columns: 50% 50%;
+    margin: 2em 2em 0 2em;
+}
+
+#plek {
+    display: none;
 }
 
 #viser {
@@ -257,12 +262,48 @@ h1 {
     margin: 5em 25em 0 25em;
 }
 
+.event-wrapper {
+    display: flex;
+}
+
 .event-tekst-container {
-    margin: 0 12em 0 12em;
+    margin: 0 10em 0 12em;
 }
+
+#plek {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    margin: 10% 15% 0 0;
+}
+
+.illustration-container {
+    display: block
+    margin-right: auto;
+}
+
+#plek2 {
+    display:none;
+}
+
+#viser {
+    display: flex;
+    width: 200px;
+}
+
+.maps-container {
+    display: flex;
+    margin-top: 10em;
+    justify-content: center;
+    overflow: hidden;
 
 }
 
+#maps {
+    border-radius: 1.5em;
+}
+
+}
 
 
 
