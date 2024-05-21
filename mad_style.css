@@ -17,22 +17,24 @@
     text-align: center;
 }
 
-.mad_flexbox_modal_kaffe{
+/* Modal knapper flexbox */
+.mad_modalknapper {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    width: 90%;
 }
-.mad_flexbox_modal_bagvaerk{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 10%;
+
+.mad_modal_item {
+    margin-left: 5%;
+    margin-bottom: 5%;
+    text-align: center;
 }
-/* Billede knap */
+
+
+/* Billede/modal knapper */
 #mad_kaffeimg_knap{
-    max-width: 50%;
+    max-width: 45%;
     margin-bottom: 3%;
     filter: drop-shadow(5px 5px 5px var(--morkblaa));
     border: none;
@@ -46,7 +48,8 @@
 }
 
 #mad_bagimg_knap{
-    max-width: 50%;
+    max-width: 45%;
+    margin-top: 7%;
     margin-bottom: 3%;
     filter: drop-shadow(5px 5px 5px var(--morkblaa));
     border: none;
@@ -63,16 +66,14 @@
 
 /* håndskrevet tekst med pile */
 #mad_haandskrift_1{
-    max-width: 30%;
-    margin-top: 10%;
-    margin-right: 80%;
+    max-width: 28%;
     margin-bottom: -10%;
+    margin-left: 5%;
 }
 #mad_haandskrift_2{
     max-width: 35%;
     margin-left: 75%;
-    margin-top: -5%;
-    margin-bottom: -8%;
+    margin-top: -80%; 
 }
 
 /* ---------------------
@@ -200,47 +201,138 @@
     left: 65%;
 }
 
-
 /* Menukort styling */
 #menukort{
     filter: drop-shadow(5px 5px 5px var(--morkblaa));
 }
 
+
 /*--------------------
     MEDIA QUERIE
 ---------------------*/
 @media screen and (min-width: 1024px) {
-
-    /* forstørret margin i siderne for at indramme content på siden */
-    .mad_flexbox_sektion{
-        padding-left: 20%;
-        padding-right: 20%;
+    /* -----------------------------
+         MAD OG DRIKKE - MEDIA Q
+    -------------------------------*/
+    /* sørger for at man ikke kan scrolle horisontalt */
+    main{
+        overflow-x: hidden;
     }
 
-    .mad_modalknapper{
+    /* tilpasning af modal knapper/sektion */
+    .mad_modalknapper {
         display: flex;
-        justify-content: center;
         flex-direction: row;
-        padding-top: 5%;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 3%;
+        margin-bottom: 5%;
     }
     
-/*
-    .mad_modalknapper_indhold{
-        display: flex;
-        flex-wrap: wrap;
+    .mad_modal_item {
+        margin-bottom: 5%;
+        margin-top: -5%;
+        text-align: center;
     }
-    */
     
-
     #mad_kaffeimg_knap{
-        max-width: 30%;
+        max-width: 100%;
+        margin-top: 3%;
     }
 
     #mad_bagimg_knap{
-        max-width: 30%;
+        max-width: 100%;
     }
 
+    /* håndskrevet tekst med pile */
+    #mad_haandskrift_1{
+        max-width: 60%;
+        margin-bottom: -10%;
+        margin-left: 35%;
+    }
 
+    #mad_haandskrift_2{
+        max-width: 60%;
+        margin-left: 10%;
+        margin-top: 0%; 
+    }
 
+    /* ---------------------
+      Tilpasning af modaler
+    ----------------------*/
+    /* ---------- Tilpasning af kaffemodal ---------- */
+
+#mad_kaffe_modal{
+    top: 15%;
+    right: 2%;
+    left: 28%;
+    max-width: 45%;
+    height: 82%;
+    border: 4px solid var(--morkblaa);
+}
+
+/* Luk kaffe modal knap */
+#lukknap_kaffe_modal {
+    font-size: 400%; /* størrelsen på lukknap (x) */
+    left: 67%;
+    top: 15%;
+  }
+
+.mad_kaffe_modal_overskrift{
+    padding: 4%;
+    font-size: 1.5em;
+}
+#mad_kaffe_modal_img{
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    opacity: 0.5;
+}
+
+.mad_kaffe_modal_illustration{
+    max-width: 7%;
+    top: 80%;
+    left: 59%;
+}
+
+/* --------- Tilpasning af bagværkmodal ---------- */
+#mad_bagvaerk_modal{
+    display: block;
+    top: 15%;
+    right: 2%;
+    left: 28%;
+    max-width: 45%;
+    height: 82%;
+    border: 4px solid var(--morkblaa);
+}
+
+/* Luk bagværk modal knap */
+#lukknap_bagvaerk_modal {
+    font-size: 400%; /* størrelsen på lukknap (x) */
+    left: 67%;
+    top: 15%;
+  }
+
+.mad_bagvaerk_modal_overskrift{
+    padding: 4%;
+    font-size: 1.5em;
+}
+#mad_bagvaerk_modal_img{
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    opacity: 0.5;
+}
+
+.mad_bagvaerk_modal_illustration{
+    max-width: 12%;
+    top: 75%;
+    left: 54%;
+}
+
+/* Tilpasning af menukort styling */
+#menukort{
+    max-width: 80%;
+    margin-left: 10%;
+}
 
 } 
