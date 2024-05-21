@@ -83,6 +83,8 @@ ul {
     align-items: center;
     width: 100%;
     z-index: 10;
+    position: sticky;
+    top: 0;
 }
 
 .logo_nav {
@@ -111,6 +113,7 @@ ul {
     color: var(--lyssand);
     display: none;
     transition: 0.5s all ease-in-out;
+    z-index: 20;
 }
 
 
