@@ -1,5 +1,6 @@
 main {
     margin: 3%;
+    overflow: hidden;
 }
 
 .forside_sektion1 {
@@ -10,17 +11,18 @@ main {
 .forside_container1_img {
     display: flex;
     justify-content: center;
+    align-items: start;
 }
 
-.forside_img_mostera {
+.forside_img_monstera {
     display: none;
 }
 
 .forside_illustration {
-    height: 100%;
+    height: auto;
     width: 38%;
     max-width: 200px;
-    padding: 1em;
+    margin: 10%;
 }
 
 .forside_p {
@@ -130,16 +132,16 @@ main {
     align-items: center;
 }
 
-.forside_container2 img.forside_illustration {
+.forside_container2 .forside_illustration {
     width: 50%;
-    margin: 10%;
+    max-width: 250px;
     margin-bottom: 0;
 }
 
 .forside_displayfont {
-    transform: rotate(30deg);
+    transform: rotate(60deg);
     width: 50%;
-    margin: 0 5em 3em 0;
+    margin: -1em 5em 4em -6em;
     max-width: 15em;
 }
 
@@ -164,7 +166,6 @@ main {
 
 .forside_faq_element.aktiv .forside_faq_svar {
     display: block;
-    /* max-height: auto; */
 }
 
 .forside_faq_sporgsmaal {
@@ -181,10 +182,7 @@ main {
 }
 
 .forside_faq_svar {
-    /* max-height: 0;
-    overflow: hidden; */
     display: none;
-    transition: display ease 0.5s; /* Fungerer ikke */
 }
 
 .forside_faq_svar p {
@@ -222,17 +220,78 @@ main {
 
 @media screen and (min-width: 1024px) {
      /* Video */
-     .forside_video_container {
+    .forside_video_container {
         width: 100vw;
-        overflow: hidden;
-        object-fit: cover;
-        display: block;
+        min-height: 370px;
+        max-height: 1080px;
         height: 50vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .forside_video_container video {
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    /* Introduktion sektion */
+    .forside_container1 {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .forside_sektion1 {
+        margin-bottom: 8%;
+    }
+    
+    /* Styling af illustrationer*/
+    .forside_container1 {
+        width: 80%;
+        max-width: 1000px;
+        margin: 2em auto;
+    }
+
+    .forside_container1_img {
+        order: 2;
+    }
+    
+    .forside_illustration {
+        min-width: 150px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 1em;
+        margin: 0;
+    }
+
+    .forside_img_kopper {
+        width: 11em;
+        margin: -3em -3em 0 0;
+    }
+
+    .forside_img_monstera {
+        display: block;
+        transform: rotate(-20deg);
+        width: 13em;
+        padding-top: 10em;
+        margin-bottom: -2.5em;
+    }
+
+    .forside_sektion1_tekst h1 {
+        text-align: left;
+    }
+
+    /* FAQ sektion */
+    .forside_container2 {
+        
     }
 }
 
-@media screen and (min-width: 1920px) {
-     /* Video */
+
+@media screen and (min-width: 1921px) {
+     /* Video forsvinder, hvis sitet tilgås fra en monitor større end 1920x*/
      .forside_video_container {
         display: none;
     }
