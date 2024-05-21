@@ -19,7 +19,8 @@ main {
 .forside_illustration {
     height: 100%;
     width: 38%;
-    max-width: 250px;
+    max-width: 200px;
+    padding: 1em;
 }
 
 .forside_p {
@@ -189,7 +190,7 @@ main {
 .forside_faq_svar p {
     font-size: 0.9em;
     border-bottom: solid 1.5px var(--morkblaa);
-    padding: 1em 4em;
+    padding: 1em 0 1em 4em;
 }
 
 .faq_knap {
@@ -212,9 +213,26 @@ main {
 
 
 @media screen and (min-width: 768px) {
-
     .forside_element {
         width: 20em;
         height: 20em;
     }
 } 
+
+@media screen and (min-width: 1024px) {
+     /* Video */
+     .forside_video_container {
+        width: 100vw;
+        overflow: hidden;
+        object-fit: cover;
+        display: block;
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+     /* Video */
+     .forside_video_container {
+        display: none;
+    }
+}
