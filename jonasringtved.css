@@ -250,9 +250,16 @@ h1 {
 
 
 /* -------------------- 
---------- FORSIDE --------
+--------- KUNSTNER --------
 ----------------------- */
 
+.spotify-container {
+    margin: 5em 25em 0 25em;
+}
+
+.event-tekst-container {
+    margin: 0 12em 0 12em;
+}
 
 }
 
