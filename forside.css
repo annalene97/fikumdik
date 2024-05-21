@@ -18,11 +18,11 @@ main {
     display: none;
 }
 
-.forside_illustration {
+.forside_img_kopper {
     height: auto;
     width: 38%;
     max-width: 200px;
-    margin: 10%;
+    margin: 6%;
 }
 
 .forside_p {
@@ -132,10 +132,10 @@ main {
     align-items: center;
 }
 
-.forside_container2 .forside_illustration {
+.forside_img_chesterfield {
     width: 50%;
     max-width: 250px;
-    margin-bottom: 0;
+    margin: 6% 6% 0 6%;
 }
 
 .forside_displayfont {
@@ -153,7 +153,7 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 32em;
 }
 
 .forside_faq {
@@ -243,7 +243,7 @@ main {
     }
 
     .forside_sektion1 {
-        margin-bottom: 8%;
+        margin-bottom: 6em;
     }
     
     /* Styling af illustrationer*/
@@ -255,20 +255,12 @@ main {
 
     .forside_container1_img {
         order: 2;
-    }
-    
-    .forside_illustration {
-        min-width: 150px;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        padding: 1em;
-        margin: 0;
+        gap: 1em;
     }
 
     .forside_img_kopper {
         width: 11em;
-        margin: -3em -3em 0 0;
+        margin: -2em -3em 0 0;
     }
 
     .forside_img_monstera {
@@ -283,9 +275,63 @@ main {
         text-align: left;
     }
 
+    /* Billede karrusel */
+    .forside_sektion2 {
+        margin-bottom: 7em;
+    }
+
     /* FAQ sektion */
+    .forside_sektion3 {
+        margin: 5em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .forside_container2 {
-        
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        max-width: 65em;
+        position: relative;
+    }
+    .forside_illustration {
+        height: auto;
+        padding: 1em;
+        margin: 0;
+    }
+    .forside_img_chesterfield {
+        max-width: 21em;
+    }
+
+    .forside_displayfont {
+        transform: rotate(0deg);
+        position: absolute;
+        width: 12em;
+        margin: -3em 0em 0em 28%;
+        top: 0;
+    }
+
+    .forside_faq_container {
+        background-color: var(--morksand);
+        padding: 1.5em;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 32em;
+    }
+
+    .forside_faq_element {
+        margin-top: 1.5em;
+    }
+
+    .forside_faq_sporgsmaal h3 {
+        font-size: 1.1em;
+    } 
+
+    .forside_faq_svar p {
+        font-size: 1em;
     }
 }
 
