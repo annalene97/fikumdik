@@ -74,9 +74,9 @@ menupunkt.forEach(menupunkt => {
         }
 
 
-/*ON SCROLL EFFEKT */
+/*ONSCROLL EFFEKT */
 
-let elementsArray = document.querySelectorAll(".event-kort");
+/*let elementsArray = document.querySelectorAll(".event-kort");
 console.log(elementsArray);
 
 window.addEventListener('scroll', fadeIn ); 
@@ -91,4 +91,17 @@ function fadeIn() {
         }
     }
 }
-fadeIn();
+fadeIn();*/
+
+/* ONSCROLL EFFEKT */
+
+// HTML Elementer til onscrool //
+
+const eventKort = document.getElementById("event-kort-scroll")
+
+window.onscroll = musiker 
+function musiker() {
+
+}
+
+

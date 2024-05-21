@@ -222,7 +222,7 @@ h1 { /* EVENTS titel */
 /*--TRANSLATE SCROLL EFFEKT*/
 
 
-.event-kort {
+/*.event-kort {
     -webkit-transform: translate(50px) rotate(-5deg)
 translateZ(0);
     transform: translateY(50px) rotate(-5deg)
@@ -249,7 +249,7 @@ translateZ(0);
     -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
     transform: translateY(0px) rotate(0deg) translateZ(0);
 }
-
+*/
 
 /* -------------------- 
 ------ DESKTOP ------
