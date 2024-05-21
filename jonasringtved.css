@@ -255,58 +255,8 @@ h1 {
 
 
 /* -------------------- 
---------- KUNSTNER --------
+--------- JONAS RINGTVED --------
 ----------------------- */
-
-
-
-.event-wrapper {
-    display: flex;
-}
-
-.event-tekst-container {
-    margin: 0 10em 0 12em;
-}
-
-#plek {
-    display: flex;
-    width: 250px;
-    height: 250px;
-    margin: 10% 15% 0 0;
-}
-
-.illustration-container {
-    display: block
-    margin-right: auto;
-}
-
-#plek2 {
-    display:none;
-}
-
-#viser {
-    display: flex;
-    width: 200px;
-}
-
-.maps-container {
-    display: flex;
-    margin-top: 10em;
-    justify-content: center;
-    overflow: hidden;
-
-}
-
-#maps {
-    border-radius: 1.5em;
-}
-
-}
-
-
-
-
-
 
 
 @media screen and (min-width: 1024px){ /* Bruges kun til menulinjen */
@@ -392,14 +342,31 @@ h1 {
     
 }
 
-.event-wrapper #plek{
-    margin: auto;
-    
+.event-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
 }
 
+.event-wrapper img {
+}
+
+#plek {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+#plek2 {
+    display: none;
+}
 
 .event-tekst-container {
-    margin: 0;
+    margin: 0 7em;
     padding-left: 30px;
 }
 
