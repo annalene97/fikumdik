@@ -26,59 +26,195 @@ main {
     padding: 5% 0;
 }
 
-/* Billede-karrusel */
 
-.forside_sektion2 { /* this */
+
+/* Billede-karrusel */
+.forside_sektion2 { 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.forside_karrusel_indhold {
-    margin: 0 10%;
-}
+.forside_karrusel_wrapper { 
+    max-width: 64em; 
+    width: 90%;
+} 
 
-.forside_element {
+.forside_karrusel  {
     position: relative;
 }
 
+.forside_karrusel_indhold {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.forside_karrusel_knap {
+    border: 2px solid var(--lyssand);
+    background-color: var(--roed);
+    box-shadow: 5px 5px 8px #000000a3;
+    border-radius: 50%;
+    width: 2.2em;
+    height: 2.2em;
+    color: var(--lyssand);
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.9;
+    font-size: 1.1em;
+}
+
+#forside_venstreknap {
+    left: -20px;
+}
+
+#forside_hojreknap {
+    right: -20px;
+}
+
+.forside_karrusel_knap:hover {
+    opacity: 1;
+}
+
+ .forside_element {
+    position: relative;
+    width: 17em;
+    height: 17em;
+    flex-shrink: 0;/* ?? */ 
+}
+
 .forside_element img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-
-
-
-/* .forside_karrusel_indhold {
-    margin: 0 40px;
+.forside_element_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
-.forside_element {
-    border-radius: 25px;
+.forside_element_knap { 
+    padding: 0.6em 1.7em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--roed);
+    color: var(--lyssand);
+    box-shadow: 5px 5px 8px #000000a3;
+    transition: ease-in-out .5s;
+    cursor: pointer;
+    margin-bottom: 2em;
+}
+
+.forside_element_knap:hover {
+    font-size: 1.2em;
+}
+
+
+/* FAQ */
+.forside_container2 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.forside_element_billede {
-    padding: 10px
+.forside_container2 img.forside_illustration {
+    width: 50%;
+    margin: 10%;
+    margin-bottom: 0;
 }
 
-.forside_element_img {
-    position: relative;
-    height: 150px;
-    width: 150px;
+.forside_displayfont {
+    transform: rotate(30deg);
+    width: 50%;
+    margin: 0 5em 3em 0;
+    max-width: 15em;
 }
 
-.forside_element_img img {
-    height: 100%;
+.forside_faq_container {
+    background-color: var(--morksand);
+    padding: 1.5em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    object-fit: cover;
-} */
-
-.forside_karrusel_knap {
-    position: absolute; 
-    fon  
+    max-width: 600px;
 }
+
+.forside_faq {
+    width: 100%;
+}
+
+.forside_faq_element {
+    margin-top: 1em;
+}
+
+.forside_faq_element.aktiv .forside_faq_svar {
+    display: block;
+    /* max-height: auto; */
+}
+
+.forside_faq_sporgsmaal {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.forside_faq_sporgsmaal h3 {
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.forside_faq_svar {
+    /* max-height: 0;
+    overflow: hidden; */
+    display: none;
+    transition: display ease 0.5s; /* Fungerer ikke */
+}
+
+.forside_faq_svar p {
+    font-size: 0.9em;
+    border-bottom: solid 1.5px var(--morkblaa);
+    padding: 1em 4em;
+}
+
+.faq_knap {
+    border: none;
+    background-color: var(--roed);
+    color: var(--lyssand);
+    border-radius: 100%;
+    padding: 0.45em 0.7em;
+    display: block; /* maybe */
+    transition: transform 0.5s ease;
+}
+
+.forside_faq_element.aktiv .faq_knap {
+   transform: rotate(90deg);
+}
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    .forside_element {
+        width: 20em;
+        height: 20em;
+    }
+} 

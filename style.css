@@ -82,6 +82,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    z-index: 10;
 }
 
 .logo_nav {
@@ -232,6 +233,10 @@ ul {
 
     .submenu {
         display: block;
+    }
+
+    .submenu i {
+        padding-left: 0.7em;
     }
 
     .menupunkt:hover {
