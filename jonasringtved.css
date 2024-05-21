@@ -258,6 +258,8 @@ h1 {
 --------- KUNSTNER --------
 ----------------------- */
 
+
+
 .event-wrapper {
     display: flex;
 }
@@ -377,10 +379,4 @@ h1 {
     width: 6em;
     margin: 0 0 -3em 2em;
 }
-}
-
-/**/
-
-.spotify-container {
-    margin: 5em 25em 0 25em;
 }
