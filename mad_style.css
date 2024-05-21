@@ -5,29 +5,24 @@
     margin-left: 7%;
     margin-right: 7%;
 }
-
 .mad_flexbox_sektion{
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-
 #mad_overskrift{
     padding-top: 10%;
     padding-bottom: 5%;
 }
-
 #mad_introtekst{
     text-align: center;
 }
-
 .mad_flexbox_modal_kaffe{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-
 .mad_flexbox_modal_bagvaerk{
     display: flex;
     justify-content: center;
@@ -35,7 +30,6 @@
     align-items: center;
     padding-bottom: 10%;
 }
-
 /* Billede knap */
 .mad_img_knap{
     max-width: 50%;
@@ -46,12 +40,10 @@
     appearance: none;
     background-color: inherit;
 }
-
 .mad_img_knap:hover{
     transform: scale(1.2);
     transition: 0.5s;
 }
-
 
 /* håndskrevet tekst med pile */
 #mad_haandskrift_1{
@@ -60,7 +52,6 @@
     margin-right: 80%;
     margin-bottom: -10%;
 }
-
 #mad_haandskrift_2{
     max-width: 35%;
     margin-left: 75%;
@@ -68,9 +59,11 @@
     margin-bottom: -8%;
 }
 
-/* MODALER */
-.mad_modal{
-    display: none; /* sæt display:none */
+/* ---------------------
+      KAFFE MODAL
+----------------------*/
+.mad_kaffe_modal{
+    display: block; /* sættes til display: block i JS */
     position: fixed;
     z-index: 1;
     top: 5%;
@@ -78,43 +71,84 @@
     left: 2%;
     background-color: var(--lyssand);
     width: 90%;
-    height: 68%;
+    height: 65%;
     border-radius: 5%;
     border: 3px solid var(--morkblaa);
 }
 
-
-.mad_modal_overskrift_box{
+.mad_kaffe_modal_overskrift_box{
     background-color: var(--roed);
     z-index: -1;
     width: 50%;
-
 }
 
-.mad_modal_overskrift{
+.mad_kaffe_modal_overskrift{
     color: var(--lyssand);
     text-align: center;
     padding: 5%;
     font-size: 1em;
 }
-
-.mad_modal_img{
+.mad_kaffe_modal_img{
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
     opacity: 0.75;
 }
-
-.mad_modal_tekst{
+.mad_kaffe_modal_tekst{
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 8%;
+    margin-top: 5%;
+}
+.mad_kaffe_modal_illustration{
+    max-width: 30%;
+    position: fixed;
+    top: 48%;
+    left: 55%;
 }
 
-.mad_modal_illustration{
-    max-width: 40%;
-  /* FÅ POSITIONERET DEN */
+/* ---------------------
+    BAGVAERK MODAL
+----------------------*/
+.mad_bagvaerk_modal{
+    display: none; /* sættes til display: block i JS */
+    position: fixed;
+    z-index: 1;
+    top: 5%;
+    right: 2%;
+    left: 2%;
+    background-color: var(--lyssand);
+    width: 90%;
+    height: 65%;
+    border-radius: 5%;
+    border: 3px solid var(--morkblaa);
 }
 
+.mad_bagvaerk_modal_overskrift_box{
+    background-color: var(--roed);
+    z-index: -1;
+    width: 50%;
+}
+.mad_bagvaerk_modal_overskrift{
+    color: var(--lyssand);
+    text-align: center;
+    padding: 5%;
+    font-size: 1em;
+}
+.mad_bagvaerk_modal_img{
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    opacity: 0.75;
+}
+.mad_bagvaerk_modal_tekst{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+.mad_bagvaerk_modal_illustration{
+    position: fixed;
+    max-width: 30%;
+    top: 48%;
+    left: 57%;
+}
 
 
 /* Menukort styling */
