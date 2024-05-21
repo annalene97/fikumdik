@@ -72,3 +72,23 @@ menupunkt.forEach(menupunkt => {
                 }
             });
         }
+
+
+/*ON SCROLL EFFEKT */
+
+let elementsArray = document.querySelectorAll(".event-kort");
+console.log(elementsArray);
+
+window.addEventListener('scroll', fadeIn ); 
+function fadeIn() {
+    for (var i = 0; i < elementsArray.length; i++) {
+        var elem = elementsArray[i]
+        var distInView = elem.getBoundingClientRect().top - window.innerHeight + 30;
+        if (distInView < 0) {
+            elem.classList.add("iVisning");
+        } else {
+            elem.classList.remove("iVisning");
+        }
+    }
+}
+fadeIn();

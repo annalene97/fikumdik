@@ -172,6 +172,8 @@ h1 { /* EVENTS titel */
     box-shadow: 0 1px 4px grey;
 }
 
+
+
 .event-image {
     width: 100%;
     display: block;
@@ -215,6 +217,37 @@ h1 { /* EVENTS titel */
 
 .event-dato, #dato { /* DATO FONT SKAL VÆRE BOLD*/
     font-weight: 600;
+}
+
+/*--TRANSLATE SCROLL EFFEKT*/
+
+
+.event-kort {
+    -webkit-transform: translate(50px) rotate(-5deg)
+translateZ(0);
+    transform: translateY(50px) rotate(-5deg)
+
+translateZ(0);
+    -webkit-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    opacity: 0;
+}
+
+#event-kort-scroll.iVisning {
+    opacity: 1;
+    -webkit-transform: translateY(0px) rotate(0deg)
+    translateZ(0);
+    transform: translateY(0px) rotate(0deg) translateZ(0);
+}
+
+.iVisning {
+    opacity: 1;
+    -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
+    transform: translateY(0px) rotate(0deg) translateZ(0);
 }
 
 /* -------------------- 
