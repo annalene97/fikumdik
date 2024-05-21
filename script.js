@@ -20,30 +20,15 @@ function menuAktiv () {
         });
     }
 }
-//Visning af dropdown-menuer (og efterfølgende luk)
-/* menupunkt.forEach(menupunkt => { //Vi kalder parametert "menupunkt"i vores arrow funktion, så vi ved det er for hvert menupunkt 
+
+menupunkt.forEach(menupunkt => { //Vi kalder parametert "menupunkt"i vores arrow funktion, så vi ved det er for hvert menupunkt
     menupunkt.addEventListener('click', () => { // Vi sætter eventlistener på hvert menupunkt.
         const clickedSubmenu = menupunkt.querySelector('.dropdown'); //Her henter vi dropdown-menuerne og kalder dem "ClickedSubmenu"
-        if (clickedSubmenu) {
-            
-            lukAndreSubmenuer(clickedSubmenu); // Her igangsættes lukAndreSubmenuer-funktionen med ClickedSubmenu som argument (altså en værdi, der spiller ind i eksekveringen)
-            clickedSubmenu.style.display = (clickedSubmenu.style.display === 'block') ? 'none' : 'block'; // Hvis det er sandt, at, submenuen er synling (block), ændres værdien til 'none'; ellers ændres værdien til 'block' (Dette er en kort if/else statement)
-
-            const ikon = menupunkt.querySelector('i');
-            ikon.classList.toggle('fa-chevron-down');
-            ikon.classList.toggle('fa-chevron-up');
-        }
-    });
-}); */
-
-menupunkt.forEach(menupunkt => {
-    menupunkt.addEventListener('click', () => {
-        const clickedSubmenu = menupunkt.querySelector('.dropdown');
         if (clickedSubmenu) {
             // Toggle submenu display
             const erAaben = clickedSubmenu.style.display === 'block';
             lukAndreSubmenuer(clickedSubmenu);
-            clickedSubmenu.style.display = erAaben ? 'none' : 'block';
+            clickedSubmenu.style.display = erAaben ? 'none' : 'block'; // Hvis det er sandt, at, submenuen er synling (block), ændres værdien til 'none'; ellers ændres værdien til 'block' (Dette er en kort if/else statement)
             
             // Toggle icon class
             const ikon = menupunkt.querySelector('i');
