@@ -71,30 +71,30 @@
             FLEXBOX
         ------------->
         <div class="mad_flexbox_container">
-
             <!-- Overskrift + Introtekst -->
             <div class="mad_flexbox_sektion">
                 <h1 id="mad_overskrift">LOKALE RÅVARER ER <br>BARE BEDRE</h1>
-                <h4 id="mad_introtekst">Her hos Fikumdik er der ikke så meget dikkedarer. Vores menu er derfor meget
+                <h4 id="mad_introtekst">Her hos Fikumdik er der ikke så meget dikkedarer. Vores menu er derfor
+                    meget
                     simpel. Dog er vi ikke gået ned på kvaliteten. Vi bruger udelukkende lokale leverandører
                     og vi udvælger dem med omhug. Ret lækre ting hvis vi selv skal sige det.</h4>
             </div>
 
             <!--------------------------
-                KNAPPER TIL KAFFEMODAL
+               KNAPPER TIL KAFFEMODAL
             ---------------------------->
             <!-- kaffe afsnit -->
             <div class="mad_flexbox_sektion">
-
                 <!-- Klik på mig -->
                 <div class="mad_flexbox_modal_kaffe">
                     <img id="mad_haandskrift_1" src="img/displayfont/klikpaamig.png" alt="klik på mig">
                 </div>
-
                 <!-- Knap kaffe-->
                 <div class="mad_flexbox_modal_kaffe">
-                    <button class="mad_img_knap">
-                        <img src="img/knapper/kaffe.png" onclick="window.open" alt="Kaffe">
+
+                    <!-- onclick knap -->
+                    <button id="mad_kaffeimg_knap">
+                        <img src="img/knapper/kaffe.png" alt="Kaffe">
                     </button>
                 </div>
             </div>
@@ -102,131 +102,79 @@
             <!-----------------
                 KAFFE MODAL 
             ------------------>
-            <main>
-                <!------------
-                    FLEXBOX
-                ------------->
-                <div class="mad_flexbox_container">
-                    <!-- Overskrift + Introtekst -->
-                    <div class="mad_flexbox_sektion">
-                        <h1 id="mad_overskrift">LOKALE RÅVARER ER <br>BARE BEDRE</h1>
-                        <h4 id="mad_introtekst">Her hos Fikumdik er der ikke så meget dikkedarer. Vores menu er derfor
-                            meget
-                            simpel. Dog er vi ikke gået ned på kvaliteten. Vi bruger udelukkende lokale leverandører
-                            og vi udvælger dem med omhug. Ret lækre ting hvis vi selv skal sige det.</h4>
-                    </div>
-                    <!--------------------------
-                        KNAPPER TIL KAFFEMODAL
-                    ---------------------------->
-                    <!-- kaffe afsnit -->
-                    <div class="mad_flexbox_sektion">
-                        <!-- Klik på mig -->
-                        <div class="mad_flexbox_modal_kaffe">
-                            <img id="mad_haandskrift_1" src="img/displayfont/klikpaamig.png" alt="klik på mig">
-                        </div>
-                        <!-- Knap kaffe-->
-                        <div class="mad_flexbox_modal_kaffe">
-                            <button class="mad_img_knap">
-                                <img src="img/knapper/kaffe.png" onclick="window.open" alt="Kaffe">
-                            </button>
-                        </div>
-                    </div>
-                    <!-----------------
-                        KAFFE MODAL 
-                    ------------------>
-                    <div class="mad_kaffe_modal">
-                        <img class="mad_kaffe_modal_img" src="img/mad&drikke/modal_kaffemaskine.jpg"
-                            alt="Fikumdik kaffe">
-                        <div class="mad_kaffe_modal_overskrift_box">
-                            <h2 class="mad_kaffe_modal_overskrift">KAFFEN ER KLAR</h2>
-                        </div>
-                        <h4 class="mad_kaffe_modal_tekst">Skal du have kaf’? Kaffen du kan nyde på vores café får vi
-                            leveret
-                            fra
-                            Stillers Coffee. <br>
-                            <br>
-                            Stillers Coffee er lokalt fra Aarhus og er kvalitet fra aller øverste hylde. <br>
-                            <br>Du kan godt glæde dig!
-                        </h4>
-                        <div>
-                            <img class="mad_kaffe_modal_illustration" src="img/illustrations/kaffekop.png" alt="">
-                        </div>
-                        <!-- Lukkefunktion -->
-                        <i class="bx bx-x" id="mad_modal_luk"></i>
-                    </div>
+            <div id="mad_kaffe_modal">
 
-                    <!----------------------------
-                        KNAPPER TIL BAGVÆRKMODAL
-                    ------------------------------>
-                    <!-- bagværk afsnit -->
-                    <div class="mad_flexbox_sektion">
-                        <!-- Eller klik på mig-->
-                        <div class="mad_flexbox_modal_bagvaerk">
-                            <img id="mad_haandskrift_2" src="img/displayfont/ellerklikpåmig.png"
-                                alt="eller klip på mig">
-                        </div>
-                        <!-- Knap bagværk -->
-                        <div class="mad_flexbox_modal_bagvaerk">
-                            <button class="mad_img_knap">
-                                <img src="img/knapper/bagvark.png" alt="Bagværk">
-                            </button>
-                        </div>
-                    </div>
+                <img id="mad_kaffe_modal_img" src="img/mad&drikke/modal_kaffemaskine.jpg" alt="Fikumdik kaffe">
 
-                    <div class="mad_bagvaerk_modal">
-                        <img class="mad_bagvaerk_modal_img" src="img/mad&drikke/modal_surdej.jpg"
-                            alt="Fikumdik frokost">
-                        <div class="mad_bagvaerk_modal_overskrift_box">
-                            <h2 class="mad_bagvaerk_modal_overskrift">ER DU SULTEN?</h2>
-                        </div>
-                        <h4 class="mad_bagvaerk_modal_tekst">
-                            Bagværket du får serveret er fra Jeremys. Et bageri beliggende i Åbyhøj. Alt bagværk er
-                            økologisk og af aller højeste kvalitet. Lige som vi allerbedst kan lide det. <br>
-                            <br>Hvilken variant frister mon dig mest?
-                        </h4>
-                        <div>
-                            <img class="mad_bagvaerk_modal_illustration" src="img/illustrations/surdej.png"
-                                alt="Fikumdik surdejsbrød">
-                        </div>
-                        <!-- Lukkefunktion -->
-                        <i class="bx bx-x" id="mad_modal_luk"></i>
-                    </div>
+                <!-- Lukkefunktion -->
+                <span id="lukknap_kaffe_modal">&times;</span>
 
-                    <!-- menukort -->
-                    <div class="mad_flexbox_sektion">
-                        <img id="menukort" src="img/mad&drikke/menukort.png" alt="Fikumdiks Menukort ">
-                    </div>
+
+                <div class="mad_kaffe_modal_overskrift_box">
+                    <h2 class="mad_kaffe_modal_overskrift">KAFFEN ER KLAR</h2>
                 </div>
-            </main>
+                <h4 class="mad_kaffe_modal_tekst">Skal du have kaf’? Kaffen du kan nyde på vores café får vi
+                    leveret
+                    fra
+                    Stillers Coffee. <br>
+                    <br>
+                    Stillers Coffee er lokalt fra Aarhus og er kvalitet fra aller øverste hylde. <br>
+                    <br>Du kan godt glæde dig!
+                </h4>
+                <div>
+                    <img class="mad_kaffe_modal_illustration" src="img/illustrations/kaffekop.png" alt="">
+                </div>
 
+
+            </div>
 
 
             <!----------------------------
-                KNAPPER TIL BAGVÆRKMODAL
+               KNAPPER TIL BAGVÆRKMODAL
             ------------------------------>
             <!-- bagværk afsnit -->
             <div class="mad_flexbox_sektion">
-
                 <!-- Eller klik på mig-->
                 <div class="mad_flexbox_modal_bagvaerk">
                     <img id="mad_haandskrift_2" src="img/displayfont/ellerklikpåmig.png" alt="eller klip på mig">
                 </div>
-
                 <!-- Knap bagværk -->
                 <div class="mad_flexbox_modal_bagvaerk">
-                    <button class="mad_img_knap">
+                    <button id="mad_bagimg_knap">
                         <img src="img/knapper/bagvark.png" alt="Bagværk">
                     </button>
                 </div>
             </div>
 
+            <div id="mad_bagvaerk_modal">
+
+                <img id="mad_bagvaerk_modal_img" src="img/mad&drikke/modal_surdej.jpg" alt="Fikumdik frokost">
+
+                <!-- Lukkefunktion -->
+                <span id="lukknap_bagvaerk_modal">&times;</span>
+
+                <div class="mad_bagvaerk_modal_overskrift_box">
+                    <h2 class="mad_bagvaerk_modal_overskrift">ER DU SULTEN?</h2>
+                </div>
+                <h4 class="mad_bagvaerk_modal_tekst">
+                    Bagværket du får serveret er fra Jeremys. Et bageri beliggende i Åbyhøj. Alt bagværk er
+                    økologisk og af aller højeste kvalitet. Lige som vi allerbedst kan lide det. <br>
+                    <br>Hvilken variant frister mon dig mest?
+                </h4>
+                <div>
+                    <img class="mad_bagvaerk_modal_illustration" src="img/illustrations/surdej.png"
+                        alt="Fikumdik surdejsbrød">
+                </div>
+                <!-- Lukkefunktion -->
+                <i class="bx bx-x" id="mad_modal_luk"></i>
+            </div>
 
             <!-- menukort -->
             <div class="mad_flexbox_sektion">
                 <img id="menukort" src="img/mad&drikke/menukort.png" alt="Fikumdiks Menukort ">
             </div>
-
         </div>
+
 
     </main>
 </body>
