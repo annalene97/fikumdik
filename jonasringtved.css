@@ -181,23 +181,6 @@ h1 {
     margin: 20px;
 }
 
-.illustration-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-#viser {
-    margin-top: 10rem;
-}
-
-
-.maps-container {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    border-radius: 4%;
-    overflow: hidden;
-}
 
 .event-tekst-container {
     margin: 1.5em;
@@ -211,10 +194,34 @@ h1 {
 .event-tekst-container, p {
     margin-top: 1.5em;
     font-weight: 400;
+    line-height: 1.5; /*SØRGER FOR AT DOTS LIGGER PÅ LINJE MED TEKSTEN*/
 }
 
+.dot2 {
+    height: 5px;
+    width: 5px;
+    vertical-align: middle; /*SÆTTER DOTS I MIDTEN VERTIKALT*/
+    margin-right: 5px;
+    background-color: var(--roed);
+    border-radius: 50%;
+    display: inline-block;
+}
 
+.illustration-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
 
+#viser {
+    margin-top: 10rem;
+}
+.maps-container {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 4%;
+    overflow: hidden;
+}
 
 /* -------------------- 
 ------ DESKTOP ------
