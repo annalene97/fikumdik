@@ -73,31 +73,32 @@ menupunkt.forEach(menupunkt => {
             });
         }
 
+
 /* ONSCROLL FADE IN EFFEKT */
 
 document.addEventListener('DOMContentLoaded', function () {
 
     // Den vælger alle elementer med class 'event-kort' og sætter dem i const-varibel
-    const elements = document.querySelectorAll('.event-kort');
+    const kort = document.querySelectorAll('.event-kort');
 
     // Her defineres en function 'onScroll' som skal køres igennem ved scroll-begivenhed
     const onScroll = () => {
 
         //Hver element bliver gennemgået i 'elements'
-        elements.forEach(element => {
+        kort.forEach(kort => {
 
-            //Henter elementets position og dimensioner i forhold til viewporten
-            const rect = element.getBoundingClientRect();
+            //Henter kortenes position og dimensioner i forhold til viewporten
+            const rect = kort.getBoundingClientRect();
 
-            //Hvis elements top er indenfor viewportens højde samt elements bund er over skærmbund:
+            //Hvis kortets top er indenfor viewportens højde samt kortenens bund er over skærmbund:
             if (rect.top <= window.innerHeight && rect.bottom >= 0) {
 
-                // class 'visning' til elementet bliver synligt
-                element.classList.add('visning');
+                // class 'visning' til kortene bliver synligt
+                kort.classList.add('visning');
             } else {
 
-                // class 'visning' bliver fjernet, hvis elementer er udenfor viewporten
-                element.classList.remove('visning');
+                // class 'visning' bliver fjernet, hvis kortene er udenfor viewporten
+                kort.classList.remove('visning');
             }
         });
     };

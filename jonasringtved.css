@@ -307,6 +307,8 @@ h1 {
 
 
 
+
+
 @media screen and (min-width: 1024px){ /* Bruges kun til menulinjen */
 /* -------------------- 
 --------- MENU --------
@@ -378,5 +380,31 @@ h1 {
 .logo_nav {
     width: 6em;
     margin: 0 0 -3em 2em;
+}
+
+
+/*-- 1024 breakpoint--*/
+
+
+
+.spotify-container {
+    margin: 2em 15em;
+    
+}
+
+.event-wrapper #plek{
+    margin: auto;
+    
+}
+
+
+.event-tekst-container {
+    margin: 0;
+    padding-left: 30px;
+}
+
+
+.maps-container {
+    margin: 5em 10em;
 }
 }
