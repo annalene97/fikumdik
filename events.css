@@ -157,16 +157,16 @@ h1 { /* EVENTS titel */
 .event-container { /*EN CONTAINER FOR ALLE EVENT-KORTENE OPSAT I GRID FOR SÆTTE DEM I 2 KOLONNER*/
     display: grid;
     grid-template-columns: 50% 50%;
-    justify-content: center; /*Centrere elementerne*/
+    justify-content: center; /*CENTRERE ELEMENTERNE*/
     gap: 1em;
     row-gap: 2em;
     padding: 20px;
-    margin: 0 auto; /* Centrer containeren */
+    margin: 0 auto; /* CENTERE CONTAINEREN */
 }
 
 .event-kort {
     position: relative;
-    width: 100%; /* Fylder hele bredden af kolonnen */
+    width: 100%; /* FYLDER HELE BREDDEN AF KOLONNEN */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 1px 4px grey;
@@ -215,45 +215,22 @@ h1 { /* EVENTS titel */
     font-size: smaller;
 }
 
-.event-dato, #dato { /* DATO FONT SKAL VÆRE BOLD*/
+.event-dato, #dato {
     font-weight: 600;
 }
 
-/*--TRANSLATE SCROLL EFFEKT*/
+/*-- FADE IN SCROLL EFFEKT -- */
 
-
-/*.event-kort {
-    -webkit-transform: translate(50px) rotate(-5deg)
-translateZ(0);
-    transform: translateY(50px) rotate(-5deg)
-
-translateZ(0);
-    -webkit-transition-delay: .3s;
-    -o-transition-delay: .3s;
-    transition-delay: .3s;
-    -webkit-transition: .4s;
-    -o-transition: .4s;
-    transition: .4s;
-    opacity: 0;
+.event-kort {
+    opacity: 0; /* EVENT-KORT BLIVER SKJULT */
+    transform: translateY(20px); /* DEN BEVÆGER EN SMULE NED */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-#event-kort-scroll.iVisning {
-    opacity: 1;
-    -webkit-transform: translateY(0px) rotate(0deg)
-    translateZ(0);
-    transform: translateY(0px) rotate(0deg) translateZ(0);
+.event-kort.visning {
+    opacity: 1; /* EVENT-KORT BLIVER VIST */
+    transform: translateY(0); /* BEVÆGER SIG TIL DEN ORIGINALE POSITION */
 }
-
-.iVisning {
-    opacity: 1;
-    -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
-    transform: translateY(0px) rotate(0deg) translateZ(0);
-}
-*/
-
-/**/
-
-
 
 
 /* -------------------- 
@@ -280,7 +257,7 @@ translateZ(0);
 
     .event-kort:hover {
         transform: scale(1.05); /* DETTE FORSTØRRE KORT VED HOVER */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gør skyggen mørkere og større */
+        box-shadow: 0 4px 8px var(--morkblaa); /* GØR SKYGGEN MØRKERE OG STØRRE */
         transition: 0.5s ease-in-out; /*SÆTTER EN SMOOTH TRANSITION DER VARER 0.5 s */
     }
 

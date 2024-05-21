@@ -73,35 +73,41 @@ menupunkt.forEach(menupunkt => {
             });
         }
 
+/* ONSCROLL FADE IN EFFEKT */
 
-/*ONSCROLL EFFEKT */
+document.addEventListener('DOMContentLoaded', function () {
 
-/*let elementsArray = document.querySelectorAll(".event-kort");
-console.log(elementsArray);
+    // Den vælger alle elementer med class 'event-kort' og sætter dem i const-varibel
+    const elements = document.querySelectorAll('.event-kort');
 
-window.addEventListener('scroll', fadeIn ); 
-function fadeIn() {
-    for (var i = 0; i < elementsArray.length; i++) {
-        var elem = elementsArray[i]
-        var distInView = elem.getBoundingClientRect().top - window.innerHeight + 30;
-        if (distInView < 0) {
-            elem.classList.add("iVisning");
-        } else {
-            elem.classList.remove("iVisning");
-        }
-    }
-}
-fadeIn();*/
+    // Her defineres en function 'onScroll' som skal køres igennem ved scroll-begivenhed
+    const onScroll = () => {
 
-/* ONSCROLL EFFEKT */
+        //Hver element bliver gennemgået i 'elements'
+        elements.forEach(element => {
 
-// HTML Elementer til onscrool //
+            //Henter elementets position og dimensioner i forhold til viewporten
+            const rect = element.getBoundingClientRect();
 
-const eventKort = document.getElementById("event-kort-scroll")
+            //Hvis elements top er indenfor viewportens højde samt elements bund er over skærmbund:
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
 
-window.onscroll = musiker 
-function musiker() {
+                // class 'visning' til elementet bliver synligt
+                element.classList.add('visning');
+            } else {
 
-}
+                // class 'visning' bliver fjernet, hvis elementer er udenfor viewporten
+                element.classList.remove('visning');
+            }
+        });
+    };
+
+    // en eventListener kalder 'onScroll' funktionn, når der bliver scrollet 
+    window.addEventListener('scroll', onScroll);
+
+    // 'onScroll' funktionen er kaldt én gang ved indlæsning for at sikre, om alle elementerne allerede er synlige
+    onScroll();
+});
+
 
 
