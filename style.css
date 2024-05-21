@@ -109,7 +109,7 @@ ul {
     top: 3.6em;
     color: var(--lyssand);
     display: none;
-    transition: all ease-in-out .3s; /* FUNGERER IKKE */
+    transition: 0.5s all ease-in-out;
 }
 
 
@@ -140,6 +140,10 @@ ul {
 .menupunkt a {
     color: var(--lyssand);
     display: block;
+}
+
+.submenu i {
+    padding-left: 0.7em;
 }
 
 .dropdown {
@@ -201,72 +205,72 @@ ul {
 /* -------------------- 
 --------- MENU --------
 ----------------------- */
-.navbar {
-    height: 5em;
-    position: sticky;
-    box-shadow: 0 1.5em 2em #00000020;
-}
+    .navbar {
+        height: 5em;
+        position: sticky;
+        box-shadow: 0 1.5em 2em #00000020;
+    }
 
-#menu {
-    display: flex;
-    position: static;
-    width: auto;
-    gap: 3rem;
-    padding: 0 8em 0 0;
-}
+    #menu {
+        display: flex;
+        position: static;
+        width: auto;
+        gap: 3rem;
+        padding: 0 7em 0 0;
+    }
 
-#menu.aktiv { /* Til js */
-    display: flex;
-}
+    #menu.aktiv { /* Til js */
+        display: flex;
+    }
 
-.menupunkt {
-    border-top: none;
-    padding: 0;
-    font-size: 1em;
-    display: block;
-}
+    .menupunkt {
+        border-top: none;
+        padding: 0;
+        font-size: 0.9em;
+        display: block;
+    }
 
-.submenu {
-    display: block;
-}
+    .submenu {
+        display: block;
+    }
 
-.menupunkt:hover {
-    cursor: pointer;
-}
+    .menupunkt:hover {
+        cursor: pointer;
+    }
 
-.dropdown {
-    position: absolute;
-    background-color: var(--cyanblaa);
-    padding: 2em 1em 1.5em 1em;
-    border-radius: 0.2em;
-    width: 12em;
-    box-shadow: 0 1.5em 2em #00000020;
-    z-index: -999;
-    margin-left: -1em;
-    transition: all ease 0.5s;
-    display: none;
-}
+    .dropdown {
+        position: absolute;
+        background-color: var(--cyanblaa);
+        padding: 2em 1em 1.5em 1em;
+        border-radius: 0.2em;
+        width: 12em;
+        box-shadow: 0 1.5em 2em #00000020;
+        z-index: -999;
+        margin-left: -1em;
+        transition: all ease 0.5s;
+        display: none;
+    }
 
-.submenu:hover .dropdown {
-    display: block;
-    margin-top: 0;
-}
+    .submenu:hover .dropdown {
+        display: block;
+        margin-top: 0;
+    }
 
-.underpunkt {
-    padding: 1em 0 0.2em 0;
-    border-bottom: solid 1px var(--lyssand);
-}
+    .underpunkt {
+        padding: 1em 0 0.2em 0;
+        border-bottom: solid 1px var(--lyssand);
+    }
 
-.underpunkt:nth-child(1) {
-    border-top: solid 1px var(--lyssand);
-}
+    .underpunkt:nth-child(1) {
+        border-top: solid 1px var(--lyssand);
+    }
 
-#burger {
-    display: none;
-}
+    #burger {
+        display: none;
+    }
 
-.logo_nav {
-    width: 6em;
-    margin: 0 0 -3em 2em;
-}
+    .logo_nav {
+        width: 6em;
+        margin: 0 0 -3em 2em;
+    }
 }
