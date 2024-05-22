@@ -83,7 +83,7 @@
     display: none; /* sættes til display: block i JS */
     position: fixed;
     z-index: 10;
-    top: 5%;
+    top: 12%;
     right: 2%;
     left: 2%;
     background-color: var(--lyssand);
@@ -100,7 +100,7 @@
     font-weight: bold;
     position: fixed; /* lukknap (x) bliver i modal boksen */
     left: 80%;
-    top: 5%;
+    top: 12%;
   }
   
   #lukknap_kaffe_modal:hover,
@@ -135,7 +135,7 @@
 .mad_kaffe_modal_illustration{
     max-width: 15%;
     position: fixed;
-    top: 62%;
+    top: 68%;
     left: 65%;
 }
 
@@ -146,7 +146,7 @@
     display: none; /* sættes til display: block i JS */
     position: fixed;
     z-index: 10;
-    top: 5%;
+    top: 12%;
     right: 2%;
     left: 2%;
     background-color: var(--lyssand);
@@ -163,7 +163,7 @@
     font-weight: bold;
     position: fixed; /* lukknap (x) bliver i modal boksen */
     left: 80%;
-    top: 5%;
+    top: 12%;
   }
   
   #lukknap_bagvaerk_modal:hover,
@@ -197,7 +197,7 @@
 .mad_bagvaerk_modal_illustration{
     position: fixed;
     max-width: 20%;
-    top: 57%;
+    top: 64%;
     left: 65%;
 }
 
@@ -219,6 +219,13 @@
         overflow-x: hidden;
     }
 
+    /* tilpasning af bredde og font størrelse på intro tekst */
+    #mad_introtekst{
+        margin-left: 18%;
+        margin-right: 18%;
+        font-size: 1.25em;
+    }
+
     /* tilpasning af modal knapper/sektion */
     .mad_modalknapper {
         display: flex;
@@ -238,7 +245,7 @@
     
     #mad_kaffeimg_knap{
         max-width: 100%;
-        margin-top: 3%;
+        margin-top: 8%;
     }
 
     #mad_bagimg_knap{
@@ -264,19 +271,19 @@
     /* ---------- Tilpasning af kaffemodal ---------- */
 
 #mad_kaffe_modal{
-    top: 15%;
+    top: 13%;
     right: 2%;
     left: 28%;
-    max-width: 45%;
-    height: 82%;
+    max-width: 40%;
+    height: 85%;
     border: 4px solid var(--morkblaa);
 }
 
 /* Luk kaffe modal knap */
 #lukknap_kaffe_modal {
     font-size: 400%; /* størrelsen på lukknap (x) */
-    left: 67%;
-    top: 15%;
+    left: 63%;
+    top: 13%;
   }
 
 .mad_kaffe_modal_overskrift{
@@ -290,14 +297,13 @@
 }
 
 .mad_kaffe_modal_illustration{
-    max-width: 7%;
-    top: 80%;
-    left: 59%;
+    max-width: 6%;
+    top: 84%;
+    left: 55%;
 }
 
 /* --------- Tilpasning af bagværkmodal ---------- */
 #mad_bagvaerk_modal{
-    display: block;
     top: 15%;
     right: 2%;
     left: 28%;
@@ -331,8 +337,8 @@
 
 /* Tilpasning af menukort styling */
 #menukort{
-    max-width: 80%;
-    margin-left: 10%;
+    max-width: 67%;
+    margin-left: 16%;
 }
 
 } 
