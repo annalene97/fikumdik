@@ -24,9 +24,8 @@ function menuAktiv () {
 // Visning af dropdown
 menupunktListe.forEach(menupunkt => { 
     menupunkt.addEventListener('click', () => { // Vi sætter eventlistener på hvert menupunkt, der lytter efter klik
-        const aktivDropdown = menupunkt.querySelector('.dropdown'); //Her henter vi dropdown-menuerne og kalder dem "aktivDropdown"
+        const aktivDropdown = menupunkt.querySelector('.dropdown'); //Her henter vi dropdown-menuen under menupunktet og kalder den "aktivDropdown"
         if (aktivDropdown) { //Hvis menupunktet, der klikkes, indeholder classen .dropdown sker der følgende:
-            // Toggle submenu display
             const erAaben = aktivDropdown.style.display === 'block'; //Her tjekker scriptet, om aktivDropdown display: 'block', og dermed er synlig/åben. Hvis det er tilfældet bliver erAabens værdi 'true'
             
             lukAndreSubmenuer(aktivDropdown); //lukAndreSubmenuer-funktionen igangsættes
@@ -34,8 +33,7 @@ menupunktListe.forEach(menupunkt => {
                 aktivDropdown.style.display ='none'
             } else {
                 aktivDropdown.style.display = 'block'
-            }
-            // Hvis det er sandt, at, submenuen er synlig (block), ændres værdien til 'none'; ellers ændres værdien til 'block'
+            } // Hvis det er sandt, at, submenuen er synlig (block), ændres værdien til 'none'; ellers ændres værdien til 'block'
             
             // Her ændrer vi classen på pilene, der indikerer, hvorvidt dropdown-menuen er åben eller ej
             const ikon = menupunkt.querySelector('i'); //Her finder vi i-elementet nested i hvert menupunkt (undtagen Events)

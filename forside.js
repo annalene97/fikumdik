@@ -14,8 +14,8 @@ const karrusel = () => {
     karruselKnapper.forEach(knap => {
         knap.addEventListener("click", () => {
             const retning = knap.id === "forside_venstreknap" ? -1 : 1; //Her tjekker scriptet om knappen indeholder id'et "forside_venstreknap". Hvis den gør det sættes værdien af retning til -1, hvis ikke id'et er tilstede, sættes værdien til 1
-            const scrollMaengde = karruselIndhold.clientWidth * retning; //clientWidth bruges for at vide hvor lang karrusellens indhold er. 
-            karruselIndhold.scrollBy({ left: scrollMaengde, behavior: "smooth"});
+            const scrollMaengde = karruselIndhold.clientWidth * retning; //clientWidth bruges for at vide hvor bred div'en med karrusellens indhold er (dvs. det, der er synligt på skærmen). Bredden ganges med retning, som bestemmer, hvorvidt karrusellen går mod højre eller venstre
+            karruselIndhold.scrollBy({ left: scrollMaengde, behavior: "smooth"}); // scrollBy fortæller hvilken retning (horisontal/vertikal) 
         });
     });
 }
