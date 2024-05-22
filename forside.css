@@ -198,16 +198,13 @@ main {
     color: var(--lyssand);
     border-radius: 100%;
     padding: 0.45em 0.7em;
-    display: block; /* maybe */
     transition: transform 0.5s ease;
+    cursor: pointer;
 }
 
 .forside_faq_element.aktiv .faq_knap {
    transform: rotate(90deg);
 }
-
-
-
 
 
 
