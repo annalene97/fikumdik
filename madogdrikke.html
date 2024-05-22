@@ -49,26 +49,26 @@
             <a href="index.html"><img src="img/logo.png" alt="Fikumdik logo"></a>
         </div>
         <ul id="menu">
-            <li class="menupunkt submenu aktiv">MAD OG DRIKKE <i class="fa-solid fa-plus"></i>
+            <li class="menupunkt submenu aktiv">MAD OG DRIKKE <i class="fa-solid fa-chevron-down"></i>
                 <ul class="dropdown">
+                    <li class="underpunkt"><a href="madogdrikke.html">RÅVARER</a></li>
                     <li class="underpunkt"><a href="madogdrikke.html#menukort">MENUKORT</a></li>
-                    <li class="underpunkt"><a href="madogdrikke.html#raavarer">RÅVARER</a></li>
                 </ul>
             </li>
             <li class="menupunkt"><a href="events.html">EVENTS</a></li>
-            <li class="menupunkt submenu">BAG OM FIKUMDIK <i class="fa-solid fa-plus"></i>
+            <li class="menupunkt submenu">BAG OM FIKUMDIK <i class="fa-solid fa-chevron-down"></i>
                 <ul class="dropdown">
                     <li class="underpunkt"><a href="fejl.html">VORES HISTORIE</a></li>
                     <li class="underpunkt"><a href="fejl.html">PRESSE</a></li>
                 </ul>
             </li>
-            <li class="menupunkt submenu">FIKUMDIK FAVNER <i class="fa-solid fa-plus"></i>
+            <li class="menupunkt submenu">FIKUMDIK FAVNER <i class="fa-solid fa-chevron-down"></i>
                 <ul class="dropdown">
                     <li class="underpunkt"><a href="fejl.html">KONTORFÆLLESSKAB</a></li>
                     <li class="underpunkt"><a href="fejl.html">HALLERNE</a></li>
                 </ul>
             </li>
-            <li class="menupunkt submenu">KONTAKT <i class="fa-solid fa-plus"></i>
+            <li class="menupunkt submenu">KONTAKT <i class="fa-solid fa-chevron-down"></i>
                 <ul class="dropdown">
                     <li class="underpunkt"><a href="fejl.html">FIND OS</a></li>
                     <li class="underpunkt"><a href="fejl.html">FAQ</a></li>
@@ -95,6 +95,7 @@
                 og vi udvælger dem med omhug. Ret lækre ting hvis vi selv skal sige det.</h4>
         </div>
 
+        <!-- Her har vi anvendt ChatGPT til at lave en simpel flexbox med 4 item i row, ved at spørge: "can you make me a flexbox with 4 items in a row?" (se bilag i rapporten)-->
         <div class="mad_modalknapper">
 
             <div class="mad_modal_item">
@@ -120,23 +121,24 @@
         </div>
 
         <!------------------
-                menukort 
-            ------------------->
+              Menukort 
+        ------------------->
         <div class="mad_flexbox_sektion">
             <img id="menukort" src="img/mad&drikke/menukort.png" alt="Fikumdiks Menukort ">
         </div>
         </div>
 
         <!-----------------------------------------------------
-                                     MODALER 
-            ------------------------------------------------------->
+                               MODALER 
+        ------------------------------------------------------->
 
         <!----------- KAFFE MODAL ---------->
         <div id="mad_kaffe_modal">
 
             <img id="mad_kaffe_modal_img" src="img/mad&drikke/modal_kaffemaskine.jpg" alt="Fikumdik kaffe">
 
-            <!-- Lukkefunktion -->
+            <!-- lukkefunktion -->
+            <!-- Her har vi brugt https://www.w3schools.com/charsets/ref_html_entities_4.asp for at lave en lukknap som kryds-->
             <span id="lukknap_kaffe_modal">&times;</span>
 
 
@@ -161,7 +163,7 @@
 
             <img id="mad_bagvaerk_modal_img" src="img/mad&drikke/modal_surdej.jpg" alt="Fikumdik frokost">
 
-            <!-- Lukkefunktion -->
+            <!-- lukkefunktion -->
             <span id="lukknap_bagvaerk_modal">&times;</span>
 
             <div class="mad_bagvaerk_modal_overskrift_box">
@@ -219,7 +221,7 @@
                 <p><a href="events.html">Events hos Fikumdik</a></p>
                 <p><a href="#">Lej en af vores haller</a</p>
                 <p><a href="#">Lej en kontorplads</a></p>
-                <p> <a href="madogdrikke.html#raavarer"></a> Læs om vores råvarer</p>
+                <p><a href="madogdrikke.html"></a> Læs om vores råvarer</p>
             </div>
             <div class="footer_logo">
                 <img src="img/logo.png" alt="Fikumdiks logo">
