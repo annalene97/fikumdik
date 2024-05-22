@@ -1,0 +1,25 @@
+
+#h1_fejl{
+    margin-top: 2em;
+    text-align: center;
+}
+
+.h4_fejl {
+text-align: center;
+}
+
+.fejl_element_knap{
+    display: flex;
+    padding: 0.6em 1.7em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--roed);
+    color: var(--lyssand);
+    box-shadow: 5px 5px 8px #000000a3;
+    transition: ease-in-out .5s;
+    cursor: pointer;
+    margin-bottom: 2em;
+    
+    
+
+}
