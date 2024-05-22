@@ -662,11 +662,11 @@ h1 { /* EVENTS titel */
     padding: 8px;
 }
 
-.event_info, #dato, #pris {
+.event_info, .dato, .pris {
     font-size: smaller;
 }
 
-.event_info, #dato {
+.event_info, .dato {
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -704,19 +704,6 @@ margin-top: 1.5em;
 color: black;
 }
 
-.knap-container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 3em;
-    text-decoration: none;
-    color: var(--lyssand);
-}
-
-.knap-container a {
-    text-decoration: none;
-    color: var(--lyssand);
-}
 
 .fejl_element_knap{
     padding: 0.6em 1.7em;
@@ -726,13 +713,18 @@ color: black;
     font-family: 'Jost';
     text-transform: uppercase;
     font-weight: 400;
-    color: var(--lyssand);
     box-shadow: 3px 3px 6px #000000a3;
     transition: ease-in-out .5s;
     cursor: pointer;
     margin-bottom: 2em;
+    margin-top: 5%;
+    margin-left: 26%;
 }
 
+.fejl_element_knap a{
+    text-decoration: none;
+    color: var(--lyssand);
+}
 
 
 .tegning-container {
@@ -779,7 +771,6 @@ color: black;
     margin: 20px;
 }
 
-
 .kunstner_tekst_container {
     margin: 1.5em;
 }
@@ -825,6 +816,8 @@ color: black;
     border-radius: 3%;
     overflow: hidden;
 }
+
+
 
 
 /* -------------------- 
@@ -1299,6 +1292,11 @@ footer h4 {
     ---------------------- */
     .tegning-container {
         margin-bottom: 4em;
+    }
+
+    .fejl_element_knap{
+        margin-top: 3%;
+        margin-left: 41%;
     }
 
     /* ------------------------------------- 
