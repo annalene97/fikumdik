@@ -304,7 +304,7 @@
 
 /* --------- Tilpasning af bagværkmodal ---------- */
 #mad_bagvaerk_modal{
-    top: 15%;
+    top: 13%;
     right: 2%;
     left: 28%;
     max-width: 45%;
@@ -330,8 +330,8 @@
 }
 
 .mad_bagvaerk_modal_illustration{
-    max-width: 12%;
-    top: 75%;
+    max-width: 10%;
+    top: 78%;
     left: 54%;
 }
 
