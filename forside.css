@@ -127,6 +127,11 @@ main {
 
 
 /* FAQ */
+
+.forside_sektion3 {
+    margin-bottom: 2em;
+}
+
 .forside_container2 {
     display: flex;
     flex-direction: column;
