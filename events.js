@@ -1,6 +1,6 @@
 /* ONSCROLL EFFEKT TIL EVENT-KODE */
 
-// Denne kode kører, når hele siden er blevet indlæst
+// Koden kører, når hele siden er blevet indlæst
 document.addEventListener('DOMContentLoaded', function () {
 
     // Vi vælger alle elementer med klassen 'event-kort' og gemmer dem i en konstant variabel kaldet 'kort'
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // For hvert kort kigger vi på det ene ad gangen
         kort.forEach(function (etKort) {
 
-            // Vi finder ud af, hvor hvert kort er placeret på skærmen, og hvor stort det er
+            // Vi finder ud af, hvor hvert 'kort' som er placeret på skærmen, og hvor stort det er
             const rect = etKort.getBoundingClientRect();
 
             // Hvis toppen af kortet er inden for viewport, og bunden af kortet er over bunden på viewport:
