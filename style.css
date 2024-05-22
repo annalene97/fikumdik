@@ -300,9 +300,15 @@ footer h4 {
         padding-left: 0.7em;
     }
 
-    .menupunkt:hover {
+    .menupunkt:hover, .underpunkt:hover {
         cursor: pointer;
+        text-decoration: underline;
     }
+
+    .menupunkt.aktiv {
+        text-decoration: underline;
+    }
+
 
     .dropdown {
         position: absolute;
@@ -315,11 +321,6 @@ footer h4 {
         margin-left: -1em;
         transition: all ease 0.5s;
         display: none;
-    }
-
-    .submenu:hover .dropdown {
-        display: block;
-        margin-top: 0;
     }
 
     .underpunkt {
