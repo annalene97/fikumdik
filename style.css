@@ -667,7 +667,7 @@ h1 { /* EVENTS titel */
 }
 
 .event_info, #dato {
-    font-weight: bold;
+    font-weight:600;
     text-transform: uppercase;
 }
 
@@ -761,12 +761,14 @@ color: black;
     gap: 1em;
 }
 
-.kunstner_dot {
+.kunstner_dot2 {
     height: 7px;
     width: 7px;
     background-color: var(--roed);
     border-radius: 50%;
     display: inline-block;
+    vertical-align: middle;
+    margin: 2px;
 }
 
 .kunstner_spotify_container {
