@@ -172,48 +172,6 @@ h1 { /* EVENTS titel */
 ------ DESKTOP ------
 -------------------- */
 
-@media screen and (min-width: 768px) {
-    .event-container {
-        grid-template-columns: 30% 30% 30%;
-        justify-content: center;
-        gap: 2.5em;
-        row-gap: 2em;
-        padding: 20px;
-        margin: auto; /*DETTE CENTRERER MIN CONTAINER*/
-        max-width: 1000px; /*SÆTTER EN PASSENDE BREDDE FOR MIN CONTAINER*/
-    }
-
-    h1 { /* EVENTS titel */
-        color: var(--roed);
-        margin-top: 1.5em;
-        font-size: 3em;
-        text-align: center;
-    }
-
-    .event-kort:hover {
-        transform: scale(1.05); /* DETTE FORSTØRRE KORT VED HOVER */
-        box-shadow: 0 4px 8px var(--morkblaa); /* GØR SKYGGEN MØRKERE OG STØRRE */
-        transition: 0.5s ease-in-out; /*SÆTTER EN SMOOTH TRANSITION DER VARER 0.5 s */
-    }
-
-    .event-info {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: var(--lyssand);
-        text-align: center;
-        padding: 20px;
-        font-size: 1.5em; /*SÆTTER NAVN, DATO, PRIS I DEN KORREKTE STØRRELSE*/
-    }
-}
-
-
 
 @media screen and (min-width: 1024px) {
     /* -------------------- 
@@ -292,7 +250,43 @@ h1 { /* EVENTS titel */
         margin: 0 0 -3em 2em;
     }
 
-    .event-container{
-    margin-bottom: 4em;
+    .event-container {
+        grid-template-columns: 30% 30% 30%;
+        justify-content: center;
+        gap: 2.5em;
+        row-gap: 2em;
+        padding: 20px;
+        margin: auto; /*DETTE CENTRERER MIN CONTAINER*/
+        margin-bottom: 4em;
+        max-width: 1000px; /*SÆTTER EN PASSENDE BREDDE FOR MIN CONTAINER*/
+    }
+
+    h1 { /* EVENTS titel */
+        color: var(--roed);
+        margin-top: 1.5em;
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .event-kort:hover {
+        transform: scale(1.05); /* DETTE FORSTØRRE KORT VED HOVER */
+        box-shadow: 0 4px 8px var(--morkblaa); /* GØR SKYGGEN MØRKERE OG STØRRE */
+        transition: 0.5s ease-in-out; /*SÆTTER EN SMOOTH TRANSITION DER VARER 0.5 s */
+    }
+
+    .event-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--lyssand);
+        text-align: center;
+        padding: 20px;
+        font-size: 1.5em; /*SÆTTER NAVN, DATO, PRIS I DEN KORREKTE STØRRELSE*/
     }
 }
