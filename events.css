@@ -97,6 +97,7 @@ h1 { /* EVENTS titel */
     row-gap: 2em;
     padding: 20px;
     margin: 0 auto; /* CENTRERE CONTAINEREN */
+    margin-bottom: 4em;
 }
 
 .event-kort {
@@ -289,5 +290,9 @@ h1 { /* EVENTS titel */
     .logo_nav {
         width: 6em;
         margin: 0 0 -3em 2em;
+    }
+
+    .event-container{
+    margin-bottom: 4em;
     }
 }
