@@ -677,12 +677,6 @@ h1 { /* EVENTS titel */
 
 /*-- STYLING AF ON SCROLL EFFEKT -- */
 
-.event-kort {
-    opacity: 0; /* EVENT-KORT BLIVER SKJULT */
-    transform: translateY(20px); /* DEN BEVÆGER EN SMULE NED */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
 .event_boks_mobil3{
     transition: all 1.5s;
     opacity: 0;
@@ -1276,7 +1270,7 @@ footer h4 {
     }
 
     .event_boks:hover {
-        transform: scale(1.05); /* DETTE FORSTØRRE KORT VED HOVER */
+        transform: scale(1.05); /* DETTE FORSTØRRE EVENT KORT VED HOVER */
         box-shadow: 0 4px 8px var(--morkblaa); /* GØR SKYGGEN MØRKERE OG STØRRE */
         transition: 0.5s ease-in-out; /*SÆTTER EN SMOOTH TRANSITION DER VARER 0.5 s */
     }
