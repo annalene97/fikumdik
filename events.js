@@ -1,39 +1,34 @@
-/* ONSCROLL EFFEKT TIL EVENT-KODE */
+// Vi definerer variablerne
+const raekke1 = document.getElementsByClassName("event_boks_mobil1");
+const raekke2 = document.getElementsByClassName("event_boks_mobil2");
+const raekke3 = document.getElementsByClassName("event_boks_mobil3");
+const raekke4 = document.getElementsByClassName("event_boks_mobil4");
 
-// Koden kører, når hele siden er blevet indlæst
-document.addEventListener('DOMContentLoaded', function () {
+// Eventlistener: Når man scroller kaldes der på funktionen fadeInd
+window.onscroll = fadeInd;
 
-    // Vi vælger alle elementer med klassen 'event-kort' og gemmer dem i en const variabel kaldet 'kort'
-    const kort = document.querySelectorAll('.event-kort');
+// Her definerer vi de elementer funktionen skal bruge
+function fadeInd(){
+    fadeInEventBoks(raekke2);
+    fadeInEventBoks(raekke3);
+    fadeInEventBoks(raekke4);
+}
 
-    // Vi laver en funktion, der skal køre, når vi scroller på siden
-    function onScroll() {
+// 
+function fadeInEventBoks(elements) {
+    for (let i = 0; i < elements.length; i++) {
+        let element = elements[i];
+        let element_info = element.getBoundingClientRect(); // for hvert plads i for-loopet får elementet placering ift. viewport
 
-        // For hvert kort kigger vi på det ene ad gangen
-        kort.forEach(function (etKort) {
-
-            // Vi finder ud af, hvor hvert 'kort' som er placeret på skærmen, og hvor stort det er
-            const rect = etKort.getBoundingClientRect();
-
-            // Hvis toppen af kortet er inden for viewport, og bunden af kortet er over bunden på viewport:
-            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-
-                // Vi tilføjer klassen 'visning' til kortet, så det bliver synligt
-                etKort.classList.add('visning');
-            } else {
-
-                // Vi fjerner klassen 'visning' fra kortet, hvis det er uden for skærmen
-                etKort.classList.remove('visning');
-            }
-        });
+        // Hvis topplaceringen er mindre end vinduets højde minus 250 (for at kunne se rækkerne fade ind, skal opacity sættes til 1)
+        if (element_info.top < window.innerHeight - 250) {
+            element.style.opacity = "1";
+        }
     }
+}
 
-    // Vi beder vinduet om at lytte efter, når vi scroller, og kalder 'onScroll' funktionen, når der bliver scrollet
-    window.addEventListener('scroll', onScroll);
 
-    // Vi kalder på 'onScroll' funktionen én gang ved indlæsning af siden for at sikre, at alle elementerne allerede er synlige
-    onScroll();
-});
+
 
 
 
