@@ -763,20 +763,18 @@ color: black;
     gap: 1em;
 }
 
-.kunstner_dot2 {
-    height: 7px;
-    width: 7px;
+.kunstner_dot {
+    height: 8px;
+    width: 8px;
+    vertical-align: middle;
     background-color: var(--roed);
     border-radius: 50%;
     display: inline-block;
-    vertical-align: middle;
-    margin: 2px;
 }
 
 .kunstner_spotify_container {
     margin: 20px;
 }
-
 
 .kunstner_tekst_container {
     margin: 1.5em;
@@ -793,7 +791,7 @@ color: black;
     line-height: 1.5; /*SØRGER FOR AT DOTS LIGGER PÅ LINJE MED TEKSTEN*/
 }
 
-.dot2 {
+.kunstner_dot2 {
     height: 5px;
     width: 5px;
     vertical-align: middle; /*SÆTTER DOTS I MIDTEN VERTIKALT*/
@@ -1315,6 +1313,10 @@ footer h4 {
         height: 100%;
         margin-right: 100px;
     
+    }
+
+    .kunstner_dot2 {
+        margin: 0.5em;
     }
     
     #kunstner_plek {
