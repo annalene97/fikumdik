@@ -22,7 +22,7 @@ margin-top: 1.5em;
     border-radius: 5px;
     background-color: var(--roed);
     color: var(--lyssand);
-    box-shadow: 5px 5px 8px #000000a3;
+    box-shadow: 3px 3px 6px #000000a3;
     transition: ease-in-out .5s;
     cursor: pointer;
     margin-bottom: 2em;
