@@ -3,7 +3,7 @@
 // Koden kører, når hele siden er blevet indlæst
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Vi vælger alle elementer med klassen 'event-kort' og gemmer dem i en konstant variabel kaldet 'kort'
+    // Vi vælger alle elementer med klassen 'event-kort' og gemmer dem i en const variabel kaldet 'kort'
     const kort = document.querySelectorAll('.event-kort');
 
     // Vi laver en funktion, der skal køre, når vi scroller på siden
