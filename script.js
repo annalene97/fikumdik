@@ -28,6 +28,7 @@ menupunktListe.forEach(menupunkt => {
             const erAaben = aktivDropdown.style.display === 'block'; //Her tjekker scriptet, om aktivDropdown har display: 'block', og dermed er synlig/åben. Hvis det er tilfældet bliver erAabens værdi 'true'
             
             lukAndreSubmenuer(aktivDropdown); //lukAndreSubmenuer-funktionen igangsættes
+            
             if (erAaben) {
                 aktivDropdown.style.display ='none'
             } else {
