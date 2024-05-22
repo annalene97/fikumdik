@@ -26,7 +26,7 @@ menupunktListe.forEach(menupunkt => {
     menupunkt.addEventListener('click', () => { // Vi sætter eventlistener på hvert menupunkt, der lytter efter klik
         const aktivDropdown = menupunkt.querySelector('.dropdown'); //Her henter vi dropdown-menuen under menupunktet og kalder den "aktivDropdown"
         if (aktivDropdown) { //Hvis menupunktet, der klikkes, indeholder classen .dropdown sker der følgende:
-            const erAaben = aktivDropdown.style.display === 'block'; //Her tjekker scriptet, om aktivDropdown display: 'block', og dermed er synlig/åben. Hvis det er tilfældet bliver erAabens værdi 'true'
+            const erAaben = aktivDropdown.style.display === 'block'; //Her tjekker scriptet, om aktivDropdown har display: 'block', og dermed er synlig/åben. Hvis det er tilfældet bliver erAabens værdi 'true'
             
             lukAndreSubmenuer(aktivDropdown); //lukAndreSubmenuer-funktionen igangsættes
             if (erAaben) {
@@ -38,7 +38,7 @@ menupunktListe.forEach(menupunkt => {
             // Her ændrer vi classen på pilene, der indikerer, hvorvidt dropdown-menuen er åben eller ej
             const ikon = menupunkt.querySelector('i'); //Her finder vi i-elementet nested i menupunktet
             if (erAaben) {
-                ikon.classList.remove('fa-chevron-up');
+                ikon.classList.remove('fa-chevron-up'); //Hvis submenuen er åbnet, når der trykkes på menupunktet, ændres classen.
                 ikon.classList.add('fa-chevron-down');
             } else {
                 ikon.classList.remove('fa-chevron-down');
@@ -48,19 +48,19 @@ menupunktListe.forEach(menupunkt => {
     });
 });
 
-        // Her sikrer vi os, at de andre submenu er lukkede, så snart én submenu åbnes
-        function lukAndreSubmenuer(aktivDropdown) { 
-            const dropdowns = document.querySelectorAll('.dropdown');
-            dropdowns.forEach(dropdown => { 
-                if (dropdown !== aktivDropdown) { // Her tjekker scriptet hvilken dropdownmenu vi klikker på - Scriptet går igennem alle dropdownmenuer. Dem, der ikke klikkes på ændres til display:none
-                    dropdown.style.display = 'none';
+            // Her sikrer vi os, at de andre submenu er lukkede, så snart én submenu åbnes
+            function lukAndreSubmenuer(aktivDropdown) { 
+                const dropdowns = document.querySelectorAll('.dropdown');
+                dropdowns.forEach(dropdown => { 
+                    if (dropdown !== aktivDropdown) { // Her tjekker scriptet hvilken dropdownmenu vi klikker på - Scriptet går igennem alle dropdownmenuer. Dem, der ikke klikkes på ændres til display:none
+                        dropdown.style.display = 'none';
 
-                    //Her har vi promptet chatGPT til at ændre classen på pilene til at matche åbning og luk af dropdown - men kun på den åbne dropdown
-                    const ikon = dropdown.closest('.menupunkt').querySelector('i');
-                    if (ikon) {
-                        ikon.classList.remove('fa-chevron-up');
-                        ikon.classList.add('fa-chevron-down');
+                        //Her har vi promptet chatGPT til at ændre classen på pilene til at matche åbning og luk af dropdown
+                        const ikon = dropdown.closest('.menupunkt').querySelector('i');
+                        if (ikon) {
+                            ikon.classList.remove('fa-chevron-up');
+                            ikon.classList.add('fa-chevron-down');
+                        }
                     }
-                }
-            });
-        }
+                });
+            }
