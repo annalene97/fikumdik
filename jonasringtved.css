@@ -1,161 +1,4 @@
-/* CSS RESET */
-
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-img, video, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-
-/* -------------------- 
------- STYLE KIT ------
--------------------- */
-
-/* Farver */
-:root {
-    --morkblaa: rgba(2, 24, 43, 1);
-    --roed: rgba(182, 22, 36, 1);
-    --cyanblaa: rgba(60, 133, 144, 1);
-    --morksand: rgba(243, 231, 196, 1);
-    --lyssand: rgba(255, 254, 245, 1);
-}
-
-/* Generel styling */
-body {
-    background-color: var(--lyssand);
-    color: var(--morkblaa);
-    font-family: "Jost", sans-serif;
-}
-
-h1 { /* Bruges til over-overskrift */
-    font-size: 1.5em;
-    font-weight: 700;
-    text-align: center;
-    color: var(--roed);
-}
-
-h2 { /* Bruges til underoverskrift */
-    font-size: 1.3em;
-    font-weight: 600;
-}
-
-h3 { /* knap */
-    font-size: 1.1em;
-    font-weight: 500;
-}
-
-h4 { /* introducerende brødtekst */
-    font-size: 1em;
-    line-height: 1.5em;
-    font-weight: 400;
-}
-
-p {
-    font-size: 1em;
-    line-height: 1.5em;
-    font-weight: 300;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-/* -------------------- 
------- NAVIGATION ------
--------------------- */
-.navbar {
-    background-color: var(--cyanblaa);
-    color: var(--lyssand);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.logo_nav {
-    width: 50px;
-    margin: 5px 10px;
-}
-
-#burger {
-    margin-right: 1em;
-}
-
-.burgerlinje {
-    background-color: var(--lyssand);
-    width: 2em;
-    height: 3px;
-    margin: .4em 0;
-    border-radius: 10px;
-}
-
-#menu {
-    position: absolute;
-    background-color: var(--cyanblaa);
-    width: 100%;
-    padding: 0.4em 1em;
-    top: 3.6em;
-    color: var(--lyssand);
-    display: none;
-    transition: all ease-in-out .3s; /* FUNGERER IKKE */
-}
-
-
-#menu.aktiv { /* Til js */
-    display: block;
-}
-
-/* Burgerikon når menuen er åben */
-#burger.aktiv .burgerlinje:nth-child(2) {
-    opacity: 0;
-}
-
-#burger.aktiv .burgerlinje:nth-child(1) {
-    transform: translateY(8px) rotate(45deg)
-}
-
-#burger.aktiv .burgerlinje:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg)
-}
-
-/* Styling af menupunkter */
-.menupunkt {
-    border-top: 1px solid var(--lyssand);
-    padding: 0.5em 0;
-    font-size: 1.2em;
-}
-
-.menupunkt a {
-    color: var(--lyssand);
-    display: block;
-}
-
-.dropdown {
-    display: none;
-}
-
-.underpunkt {
-    padding: 0.3em 0 0.2em 2em;
-}
-
-.underpunkt a {
-    font-size: 0.9em;
-}
-
-
-/* START */
+/* JONAS RINGTVED */
 
 h1 {
     margin-top: 2em;
@@ -274,7 +117,7 @@ h1 {
     position: static;
     width: auto;
     gap: 3rem;
-    padding: 0 8em 0 0;
+    padding: 0 7em 0 0;
 }
 
 #menu.aktiv { /* Til js */
@@ -284,12 +127,16 @@ h1 {
 .menupunkt {
     border-top: none;
     padding: 0;
-    font-size: 1em;
+    font-size: 0.9em;
     display: block;
 }
 
 .submenu {
     display: block;
+}
+
+.submenu i {
+    padding-left: 0.7em;
 }
 
 .menupunkt:hover {
@@ -331,14 +178,13 @@ h1 {
     width: 6em;
     margin: 0 0 -3em 2em;
 }
-
+}
 
 /*-- 1024 breakpoint--*/
 
 
-
 .spotify-container {
-    margin: 2em 15em;
+    margin: 5em 15em;
     
 }
 
@@ -351,21 +197,25 @@ h1 {
 
 }
 
-.event-wrapper img {
-
-}
 
 #plek {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    width: 1000px;
+    height: auto;
 }
 
 #plek2 {
     display: none;
 }
+
+#viser {
+    position: right;
+    width: 350px;
+    height: auto;
+}
+
 
 .event-tekst-container {
     margin: 0 7em;
