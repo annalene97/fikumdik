@@ -155,7 +155,7 @@ h1 { /* EVENTS titel */
     font-weight: 600;
 }
 
-/*-- FADE IN SCROLL EFFEKT -- */
+/*-- STYLING AF ON SCROLL EFFEKT -- */
 
 .event-kort {
     opacity: 0; /* EVENT-KORT BLIVER SKJULT */
