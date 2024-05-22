@@ -1398,6 +1398,10 @@ footer h4 {
 
 /* BREAKPOINT TIL STOR DESKTOP SKÆRM */
 @media screen and (min-width: 1921px) {
+    /* -------------------- 
+    ------- FORSIDE -------
+    -------------------- */
+    
     /* Video forsvinder, hvis sitet tilgås fra en monitor større end 1920x*/
     .forside_video_container {
        display: none;
