@@ -6,10 +6,17 @@
 
 .h4_fejl {
 text-align: center;
+margin-top: 1.5em;
+}
+
+.knap-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 1em;
 }
 
 .fejl_element_knap{
-    display: flex;
     padding: 0.6em 1.7em;
     border: none;
     border-radius: 5px;
@@ -19,7 +26,4 @@ text-align: center;
     transition: ease-in-out .5s;
     cursor: pointer;
     margin-bottom: 2em;
-    
-    
-
 }
