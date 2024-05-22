@@ -25,10 +25,10 @@ window.addEventListener("load", karrusel); // Karrusellen starter, når siden lo
 
 /* FAQ */
 //Først definerer vi vores variabel
-const faqs = document.querySelectorAll(".forside_faq_element")
+const sporgsmaalListe = document.querySelectorAll(".forside_faq_element")
 
-faqs.forEach((faq) => {
-    faq.addEventListener('click', () => { //Når der trykkes på et faq spørgsmål tilføjes classen 'aktiv', der er stylet med display: 'block'
-        faq.classList.toggle('aktiv');
+sporgsmaalListe.forEach((sporgsmaal) => {
+    sporgsmaal.addEventListener('click', () => { //Når der trykkes på et faq spørgsmål tilføjes classen 'aktiv', der er stylet med display: 'block'
+        sporgsmaal.classList.toggle('aktiv');
     })
 })
