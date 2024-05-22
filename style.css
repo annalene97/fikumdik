@@ -120,7 +120,6 @@ ul {
     transition: all 0.3s ease-in-out;
 }
 
-
 #menu.aktiv { /* Til js */
     display: block;
 }
@@ -164,6 +163,667 @@ ul {
 
 .underpunkt a {
     font-size: 0.9em;
+}
+
+
+/* -------------------- 
+------- FORSIDE -------
+-------------------- */
+main {
+    margin: 3%;
+    overflow: hidden;
+}
+
+.forside_sektion1 {
+    border-bottom: 2px solid var(--morkblaa);
+    margin-bottom: 10%;
+}
+
+.forside_container1_img {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.forside_img_monstera {
+    display: none;
+}
+
+.forside_img_kopper {
+    height: auto;
+    width: 38%;
+    max-width: 200px;
+    margin: 6%;
+}
+
+.forside_p {
+    padding: 5% 0;
+}
+
+
+
+/* Billede-karrusel */
+.forside_sektion2 { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forside_karrusel_wrapper { 
+    max-width: 64em; 
+    width: 90%;
+} 
+
+.forside_karrusel  {
+    position: relative;
+}
+
+.forside_karrusel_indhold {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.forside_karrusel_knap {
+    border: 2px solid var(--lyssand);
+    background-color: var(--roed);
+    box-shadow: 5px 5px 8px #000000a3;
+    border-radius: 50%;
+    width: 2.2em;
+    height: 2.2em;
+    color: var(--lyssand);
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.9;
+    font-size: 1.1em;
+}
+
+#forside_venstreknap {
+    left: -20px;
+}
+
+#forside_hojreknap {
+    right: -20px;
+}
+
+.forside_karrusel_knap:hover {
+    opacity: 1;
+}
+
+ .forside_element {
+    position: relative;
+    width: 17em;
+    height: 17em;
+    flex-shrink: 0;/* ?? */ 
+}
+
+.forside_element img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.forside_element_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+
+.forside_element_knap { 
+    padding: 0.6em 1.7em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--roed);
+    color: var(--lyssand);
+    box-shadow: 5px 5px 8px #000000a3;
+    transition: ease-in-out .5s;
+    cursor: pointer;
+    margin-bottom: 2em;
+}
+
+.forside_element_knap:hover {
+    font-size: 1.2em;
+}
+
+
+/* FAQ */
+
+.forside_sektion3 {
+    margin-bottom: 2em;
+}
+
+.forside_container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forside_img_chesterfield {
+    width: 50%;
+    max-width: 250px;
+    margin: 6% 6% 0 6%;
+}
+
+.forside_displayfont {
+    transform: rotate(60deg);
+    width: 50%;
+    margin: -1em 5em 4em -6em;
+    max-width: 15em;
+}
+
+.forside_faq_container {
+    background-color: var(--morksand);
+    padding: 1.5em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 32em;
+}
+
+.forside_faq {
+    width: 100%;
+}
+
+.forside_faq_element {
+    margin-top: 1em;
+}
+
+.forside_faq_element.aktiv .forside_faq_svar {
+    display: block;
+}
+
+.forside_faq_sporgsmaal {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.forside_faq_sporgsmaal h3 {
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.forside_faq_svar {
+    display: none;
+}
+
+.forside_faq_svar p {
+    font-size: 0.9em;
+    border-bottom: solid 1.5px var(--morkblaa);
+    padding: 1em 0 1em 4em;
+}
+
+.faq_knap {
+    border: none;
+    background-color: var(--roed);
+    color: var(--lyssand);
+    border-radius: 100%;
+    padding: 0.45em 0.7em;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.forside_faq_element.aktiv .faq_knap {
+   transform: rotate(90deg);
+}
+
+
+/* --------------------------
+------- MAD OG DRIKKE -------
+--------------------------- */
+.mad_flexbox_sektion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 8%;
+}
+
+#mad_overskrift{
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+#mad_introtekst{
+    text-align: center;
+}
+
+/* Modal knapper flexbox */
+/* Her har vi anvendt ChatGPT til at lave en simpel flexbox med 4 item i row, ved at spørge: "can you make me a flexbox with 4 items in a row?" (se bilag i rapporten) */
+.mad_modalknapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.mad_modal_item {
+    margin-left: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+
+/* Billede/modal knapper */
+#mad_kaffeimg_knap{
+    max-width: 45%;
+    margin-bottom: 3%;
+    filter: drop-shadow(5px 5px 5px var(--morkblaa));
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+#mad_kaffeimg_knap:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+#mad_bagimg_knap{
+    max-width: 45%;
+    margin-top: 7%;
+    margin-bottom: 3%;
+    filter: drop-shadow(5px 5px 5px var(--morkblaa));
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    }
+
+#mad_bagimg_knap:hover{
+        transform: scale(1.2);
+        transition: 0.5s;
+    }
+
+
+/* håndskrevet tekst med pile */
+#mad_haandskrift_1{
+    max-width: 28%;
+    margin-bottom: -10%;
+    margin-left: 5%;
+}
+#mad_haandskrift_2{
+    max-width: 35%;
+    margin-left: 75%;
+    margin-top: -80%; 
+}
+
+/* ---------------------
+      KAFFE MODAL
+----------------------*/
+#mad_kaffe_modal{
+    display: none; /* sættes til display: block i JS */
+    position: fixed;
+    z-index: 10;
+    top: 12%;
+    right: 2%;
+    left: 2%;
+    background-color: var(--lyssand);
+    max-width: 90%;
+    height: 70%;
+    border-radius: 5%;
+    border: 3px solid var(--morkblaa);
+}
+
+/* Luk kaffe modal knap */
+/* Her har vi anvendt ChatGPT til at få lukknappen (x) til at overlay billedet i modalerne (se bilag i rapporten) */
+#lukknap_kaffe_modal {
+    color: var(--morkblaa);
+    font-size: 300%; /* størrelsen på lukknap (x) */
+    font-weight: bold;
+    position: fixed; /* lukknap (x) bliver i modal boksen */
+    left: 80%;
+    top: 12%;
+  }
+  
+  #lukknap_kaffe_modal:hover,
+  #lukknap_kaffe_modal:focus {
+    color: var(--roed); /* farven på lukknap (x) når man hover */
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.mad_kaffe_modal_overskrift_box{
+    background-color: var(--roed);
+    z-index: -1;
+    width: 50%;
+}
+
+.mad_kaffe_modal_overskrift{
+    color: var(--lyssand);
+    text-align: center;
+    padding: 5%;
+    font-size: 1em;
+}
+#mad_kaffe_modal_img{
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    opacity: 0.5;
+}
+.mad_kaffe_modal_tekst{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+.mad_kaffe_modal_illustration{
+    max-width: 15%;
+    position: fixed;
+    top: 68%;
+    left: 65%;
+}
+
+/* ---------------------
+    BAGVAERK MODAL
+----------------------*/
+#mad_bagvaerk_modal{
+    display: none; /* sættes til display: block i JS */
+    position: fixed;
+    z-index: 10;
+    top: 12%;
+    right: 2%;
+    left: 2%;
+    background-color: var(--lyssand);
+    width: 90%;
+    height: 65%;
+    border-radius: 5%;
+    border: 3px solid var(--morkblaa);
+}
+
+/* Luk kaffe modal knap */
+#lukknap_bagvaerk_modal {
+    color: var(--morkblaa);
+    font-size: 300%; /* størrelsen på lukknap (x) */
+    font-weight: bold;
+    position: fixed; /* lukknap (x) bliver i modal boksen */
+    left: 80%;
+    top: 12%;
+  }
+  
+  #lukknap_bagvaerk_modal:hover,
+  #lukknap_bagvaerk_modal:focus {
+    color: var(--roed); /* farven på lukknap (x) når man hover */
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.mad_bagvaerk_modal_overskrift_box{
+    background-color: var(--roed);
+    z-index: -1;
+    width: 50%;
+}
+.mad_bagvaerk_modal_overskrift{
+    color: var(--lyssand);
+    text-align: center;
+    padding: 5%;
+    font-size: 1em;
+}
+#mad_bagvaerk_modal_img{
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    opacity: 0.75;
+}
+.mad_bagvaerk_modal_tekst{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+.mad_bagvaerk_modal_illustration{
+    position: fixed;
+    max-width: 20%;
+    top: 64%;
+    left: 65%;
+}
+
+/* Menukort styling */
+#menukort{
+    filter: drop-shadow(5px 5px 5px var(--morkblaa));
+}
+
+
+/* -------------------- 
+------- EVENTS -------
+-------------------- */
+h1 { /* EVENTS titel */
+    color: var(--roed);
+    margin: 1em 0 1em 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+.event_container { /*EN CONTAINER FOR ALLE EVENT-KORTENE OPSAT I GRID FOR SÆTTE DEM I 2 KOLONNER*/
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center; /*CENTRERE ELEMENTERNE*/
+    gap: 1em;
+    row-gap: 2em;
+    padding: 20px;
+    margin: 0 auto; /* CENTRERE CONTAINEREN */
+    margin-bottom: 4em;
+}
+
+.event_boks {
+    position: relative;
+    width: 100%; /* FYLDER HELE BREDDEN AF KOLONNEN */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px grey;
+}
+
+.event_img {
+    width: 100%;
+    display: block;
+}
+
+.event_navn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--lyssand);
+    text-align: center;
+    padding: 20px;
+}
+
+.event_navn h2 { 
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 1em;
+}
+
+.event_info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--roed);
+    color: var(--lyssand);
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.event_info, #dato, #pris {
+    font-size: smaller;
+}
+
+.event_info, #dato {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*-- STYLING AF ON SCROLL EFFEKT -- */
+
+.event-kort {
+    opacity: 0; /* EVENT-KORT BLIVER SKJULT */
+    transform: translateY(20px); /* DEN BEVÆGER EN SMULE NED */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.event_boks_mobil3{
+    transition: all 1.5s;
+    opacity: 0;
+}
+
+.event_boks_mobil4{
+    transition: all 1.5s;
+    opacity: 0;
+}
+
+
+/* ---------------------
+------- FEJLSIDE -------
+---------------------- */
+#h1_fejl{
+    margin-top: 2em;
+    text-align: center;
+}
+
+.h4_fejl {
+text-align: center;
+margin-top: 1.5em;
+color: black;
+}
+
+.knap-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 3em;
+    text-decoration: none;
+    color: var(--lyssand);
+}
+
+.knap-container a {
+    text-decoration: none;
+    color: var(--lyssand);
+}
+
+.fejl_element_knap{
+    padding: 0.6em 1.7em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--roed);
+    font-family: 'Jost';
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--lyssand);
+    box-shadow: 3px 3px 6px #000000a3;
+    transition: ease-in-out .5s;
+    cursor: pointer;
+    margin-bottom: 2em;
+}
+
+
+
+.tegning-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4em;
+}
+
+#kaffebonner {
+    display: none;
+}
+
+#lanestol {
+    width: 15em;
+    margin-top: 4em;
+}
+
+
+/* ------------------------------------- 
+------- JONAS RINGTVED UNDERSIDE -------
+------------------------------------- */
+.kunstner_navn {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.kunstner_dato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.kunstner_dot {
+    height: 7px;
+    width: 7px;
+    background-color: var(--roed);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.kunstner_spotify_container {
+    margin: 20px;
+}
+
+
+.kunstner_tekst_container {
+    margin: 1.5em;
+}
+
+.kunstner_tekst_container h3 {
+    margin-top: 2.5em;
+    font-weight: 600;
+}
+
+.kunstner_tekst_container p {
+    margin-top: 1.5em;
+    font-weight: 400;
+    line-height: 1.5; /*SØRGER FOR AT DOTS LIGGER PÅ LINJE MED TEKSTEN*/
+}
+
+.dot2 {
+    height: 5px;
+    width: 5px;
+    vertical-align: middle; /*SÆTTER DOTS I MIDTEN VERTIKALT*/
+    margin-right: 5px;
+    background-color: var(--roed);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.illustration_container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 2em 2em 0 2em;
+}
+
+#kunstner_plek {
+    display: none;
+}
+
+#kunstner_viser {
+    margin-top: 10rem;
+}
+.kunstner_maps_container {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 3%;
+    overflow: hidden;
 }
 
 
@@ -223,13 +883,14 @@ footer h4 {
 }
 
 
+/* -------------------------------------------------
 
+------ TILPASNING TIL DESKTOP - MEDIA QUERIES ------
 
-/* -------------------- 
------- DESKTOP ------
--------------------- */
-
+-------------------------------------------------- */
+/* BREAKPOINT T. TABLET */
 @media screen and (min-width: 768px){
+    /* ------- GENEREL STYLING --------*/
     h1 { /* Bruges til over-overskrift */
         font-size: 2.4em;
     }
@@ -249,13 +910,16 @@ footer h4 {
     p {
         font-size: 1em;
     }
+
+   /* ------- FORSIDE --------*/
+   .forside_element {
+    width: 20em;
+    height: 20em;
+    }
 }
 
 
-
-
-
-
+/* BREAKPOINT TIL DESKTOP */
 @media screen and (min-width: 1024px){ /* Bruges kun til menulinjen */
 /* -------------------- 
 --------- MENU --------
@@ -302,7 +966,6 @@ footer h4 {
         text-decoration: underline;
     }
 
-
     .dropdown {
         position: absolute;
         background-color: var(--cyanblaa);
@@ -333,6 +996,358 @@ footer h4 {
         width: 6em;
         margin: 0 0 -3em 2em;
     }
+
+     /* -------------------- 
+    ------- FORSIDE -------
+    -------------------- */
+     /* Video */
+     .forside_video_container {
+        width: 100vw;
+        min-height: 370px;
+        max-height: 1080px;
+        height: 50vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .forside_video_container video {
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    /* Introduktion sektion */
+    .forside_container1 {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .forside_sektion1 {
+        margin-bottom: 6em;
+    }
+    
+    /* Styling af illustrationer*/
+    .forside_container1 {
+        width: 80%;
+        max-width: 1000px;
+        margin: 2em auto;
+    }
+
+    .forside_container1_img {
+        order: 2;
+        gap: 1em;
+    }
+
+    .forside_img_kopper {
+        width: 11em;
+        margin: -2em -3em 0 0;
+    }
+
+    .forside_img_monstera {
+        display: block;
+        transform: rotate(-20deg);
+        width: 13em;
+        padding-top: 10em;
+        margin-bottom: -2.5em;
+    }
+
+    .forside_sektion1_tekst h1 {
+        text-align: left;
+    }
+
+    /* Billede karrusel */
+    .forside_sektion2 {
+        margin-bottom: 7em;
+    }
+
+    /* FAQ sektion */
+    .forside_sektion3 {
+        margin: 5em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .forside_container2 {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        max-width: 65em;
+        position: relative;
+    }
+    .forside_illustration {
+        height: auto;
+        padding: 1em;
+        margin: 0;
+    }
+    .forside_img_chesterfield {
+        max-width: 21em;
+    }
+
+    .forside_displayfont {
+        transform: rotate(0deg);
+        position: absolute;
+        width: 12em;
+        margin: -3em 0em 0em 28%;
+        top: 0;
+    }
+
+    .forside_faq_container {
+        background-color: var(--morksand);
+        padding: 1.5em;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 32em;
+    }
+
+    .forside_faq_element {
+        margin-top: 1.5em;
+    }
+
+    .forside_faq_sporgsmaal h3 {
+        font-size: 1.1em;
+    } 
+
+    .forside_faq_svar p {
+        font-size: 1em;
+    }
+
+
+    /* --------------------------
+    ------- MAD OG DRIKKE -------
+    --------------------------- */
+    /* sørger for at man ikke kan scrolle horisontalt */
+    main{
+        overflow-x: hidden;
+    }
+
+    #mad_overskrift{
+        padding-top: 0%;
+    }
+
+    /* tilpasning af bredde og font størrelse på intro tekst */
+    #mad_introtekst{
+        margin-left: 18%;
+        margin-right: 18%;
+        font-size: 1.25em;
+    }
+
+    /* tilpasning af modal knapper/sektion */
+    .mad_modalknapper {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 3%;
+        margin-bottom: 5%;
+    }
+    
+    .mad_modal_item {
+        margin-bottom: 5%;
+        margin-top: -5%;
+        text-align: center;
+    }
+    
+    #mad_kaffeimg_knap{
+        max-width: 100%;
+        margin-top: 8%;
+    }
+
+    #mad_bagimg_knap{
+        max-width: 100%;
+    }
+
+    /* håndskrevet tekst med pile */
+    #mad_haandskrift_1{
+        max-width: 60%;
+        margin-bottom: -10%;
+        margin-left: 35%;
+    }
+
+    #mad_haandskrift_2{
+        max-width: 60%;
+        margin-left: 10%;
+        margin-top: 0%; 
+    }
+
+    /* ------ Tilpasning af modaler --------*/
+    /* Tilpasning af kaffemodal */
+
+    #mad_kaffe_modal{
+        top: 13%;
+        right: 2%;
+        left: 28%;
+        max-width: 40%;
+        height: 85%;
+        border: 4px solid var(--morkblaa);
+    }
+
+    /* Luk kaffe modal knap */
+    #lukknap_kaffe_modal {
+        font-size: 400%; /* størrelsen på lukknap (x) */
+        left: 63%;
+        top: 13%;
+    }
+
+    .mad_kaffe_modal_overskrift{
+        padding: 4%;
+        font-size: 1.5em;
+    }
+
+    #mad_kaffe_modal_img{
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+        opacity: 0.5;
+    }
+
+    .mad_kaffe_modal_illustration{
+        max-width: 6%;
+        top: 84%;
+        left: 55%;
+    }
+
+    /* Tilpasning af bagværkmodal */
+    #mad_bagvaerk_modal{
+        top: 13%;
+        right: 2%;
+        left: 28%;
+        max-width: 45%;
+        height: 82%;
+        border: 4px solid var(--morkblaa);
+    }
+
+    /* Luk bagværk modal knap */
+    #lukknap_bagvaerk_modal {
+        font-size: 400%; /* størrelsen på lukknap (x) */
+        left: 67%;
+        top: 15%;
+    }
+
+    .mad_bagvaerk_modal_overskrift{
+        padding: 4%;
+        font-size: 1.5em;
+    }
+
+    #mad_bagvaerk_modal_img{
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+        opacity: 0.5;
+    }
+
+    .mad_bagvaerk_modal_illustration{
+        max-width: 10%;
+        top: 78%;
+        left: 54%;
+    }
+
+    /* Tilpasning af menukort styling */
+    #menukort{
+        max-width: 67%;
+        margin-left: 16%;
+    }
+
+
+    /* -------------------- 
+    ------- EVENTS -------
+    -------------------- */
+    .event_container {
+        grid-template-columns: 30% 30% 30%;
+        justify-content: center;
+        gap: 2.5em;
+        row-gap: 2em;
+        padding: 20px;
+        margin: auto; /*DETTE CENTRERER MIN CONTAINER*/
+        margin-bottom: 4em;
+        max-width: 1000px; /*SÆTTER EN PASSENDE BREDDE FOR MIN CONTAINER*/
+    }
+
+    h1 { /* EVENTS titel */
+        color: var(--roed);
+        margin-top: 1.5em;
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .event_boks:hover {
+        transform: scale(1.05); /* DETTE FORSTØRRE KORT VED HOVER */
+        box-shadow: 0 4px 8px var(--morkblaa); /* GØR SKYGGEN MØRKERE OG STØRRE */
+        transition: 0.5s ease-in-out; /*SÆTTER EN SMOOTH TRANSITION DER VARER 0.5 s */
+    }
+
+    .event_navn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--lyssand);
+        text-align: center;
+        padding: 20px;
+        font-size: 1.5em; /*SÆTTER NAVN, DATO, PRIS I DEN KORREKTE STØRRELSE*/
+    }
+
+    /* ---------------------
+    ------- FEJLSIDE -------
+    ---------------------- */
+    .tegning-container {
+        margin-bottom: 4em;
+    }
+
+    /* ------------------------------------- 
+    ------- JONAS RINGTVED UNDERSIDE -------
+    ------------------------------------- */
+    .kunstner_spotify_container {
+        margin: 5em 15em;
+        
+    }
+    
+    .kunstner_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin-right: 100px;
+    
+    }
+    
+    #kunstner_plek {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1000px;
+        height: auto;
+    }
+    
+    #kunstner_plek2 {
+        display: none;
+    }
+    
+    #kunstner_viser {
+        position: right;
+        width: 350px;
+        height: auto;
+    }
+    
+    
+    .kunstner_tekst_container {
+        margin: 0 7em;
+        padding-left: 30px;
+    }
+    
+    
+    .kunstner_maps_container {
+        margin: 5em 10em;
+        border-radius: 10px;
+    }
+    
 
     /* -------------------- 
     ------- FOOTER -------
@@ -385,4 +1400,13 @@ footer h4 {
         max-width: 9em;
         margin: auto 0
     }
+}
+
+
+/* BREAKPOINT TIL STOR DESKTOP SKÆRM */
+@media screen and (min-width: 1921px) {
+    /* Video forsvinder, hvis sitet tilgås fra en monitor større end 1920x*/
+    .forside_video_container {
+       display: none;
+   }
 }
