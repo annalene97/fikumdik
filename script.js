@@ -1,4 +1,3 @@
-
 /* BURGERMENU */
 
 // Definering af variabler
