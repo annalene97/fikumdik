@@ -1,7 +1,7 @@
 
 /* Billede karrusel (slider) */
 
-//Denne kode er taget og tilpasset fra https://www.codingnepalweb.com/responsive-image-slider-html-css-javascript/ 
+//Denne kode samt styling er taget og tilpasset fra https://www.codingnepalweb.com/responsive-image-slider-html-css-javascript/ 
 
 
 // Karrusellen skal kunne navigeres vha. knapper og scroll. 
@@ -10,6 +10,7 @@ const karrusel = () => {
     const karruselKnapper = document.querySelectorAll(".forside_karrusel_knap"); //Her henter vi alle (vores to) navigationsknapper
     const karruselIndhold = document.querySelector(".forside_karrusel_indhold"); //Her henter vi det første billede i rækken
 
+    //Ønsket var at karrusellen kun rykkede ét billede ad gangen. Dette er dog ikke lykkes med denne kode. Dertil ønskede vi, at karrusellen var uendelig (looped)
     karruselKnapper.forEach(knap => {
         knap.addEventListener("click", () => {
             const retning = knap.id === "forside_venstreknap" ? -1 : 1;
@@ -19,15 +20,15 @@ const karrusel = () => {
     });
 }
 
-window.addEventListener("load", karrusel);
+window.addEventListener("load", karrusel); // Karrusellen starter, når siden indlæses
+
 
 /* FAQ */
-
-//Først definerer vi vores variabler
+//Først definerer vi vores variabel
 const faqs = document.querySelectorAll(".forside_faq_element")
 
 faqs.forEach((faq) => {
-    faq.addEventListener('click', () => {
+    faq.addEventListener('click', () => { //Når der trykkes på et faq spørgsmål tilføjes classen 'aktiv', der er stylet med display: 'block'
         faq.classList.toggle('aktiv');
     })
 })
