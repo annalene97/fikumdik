@@ -1,85 +1,3 @@
-/* -------------------- 
------- NAVIGATION ------
--------------------- */
-.navbar {
-    background-color: var(--cyanblaa);
-    color: var(--lyssand);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.logo_nav {
-    width: 50px;
-    margin: 5px 10px;
-}
-
-#burger {
-    margin-right: 1em;
-}
-
-.burgerlinje {
-    background-color: var(--lyssand);
-    width: 2em;
-    height: 3px;
-    margin: .4em 0;
-    border-radius: 10px;
-}
-
-#menu {
-    position: absolute;
-    background-color: var(--cyanblaa);
-    width: 100%;
-    padding: 0.4em 1em;
-    top: 3.6em;
-    color: var(--lyssand);
-    display: none;
-    transition: all ease-in-out .3s; /* FUNGERER IKKE */
-    z-index: 1000; /*SØRGER FOR DROPDOWN MENU IKKE BLIVER SAT BAGVED CONTENT*/
-}
-
-#menu.aktiv { /* Til js */
-    display: block;
-}
-
-/* Burgerikon når menuen er åben */
-#burger.aktiv .burgerlinje:nth-child(2) {
-    opacity: 0;
-}
-
-#burger.aktiv .burgerlinje:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-#burger.aktiv .burgerlinje:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg);
-}
-
-/* Styling af menupunkter */
-.menupunkt {
-    border-top: 1px solid var(--lyssand);
-    padding: 0.5em 0;
-    font-size: 1.2em;
-}
-
-.menupunkt a {
-    color: var(--lyssand);
-    display: block;
-}
-
-.dropdown {
-    display: none;
-}
-
-.underpunkt {
-    padding: 0.3em 0 0.2em 2em;
-}
-
-.underpunkt a {
-    font-size: 0.9em;
-}
-
 /*START AF EVENTS SIDEN*/
 
 h1 { /* EVENTS titel */
@@ -89,7 +7,7 @@ h1 { /* EVENTS titel */
     text-align: center;
 }
 
-.event-container { /*EN CONTAINER FOR ALLE EVENT-KORTENE OPSAT I GRID FOR SÆTTE DEM I 2 KOLONNER*/
+.event_container { /*EN CONTAINER FOR ALLE EVENT-KORTENE OPSAT I GRID FOR SÆTTE DEM I 2 KOLONNER*/
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content: center; /*CENTRERE ELEMENTERNE*/
@@ -100,7 +18,7 @@ h1 { /* EVENTS titel */
     margin-bottom: 4em;
 }
 
-.event-kort {
+.event_boks {
     position: relative;
     width: 100%; /* FYLDER HELE BREDDEN AF KOLONNEN */
     border-radius: 10px;
@@ -108,14 +26,12 @@ h1 { /* EVENTS titel */
     box-shadow: 0 1px 4px grey;
 }
 
-
-
-.event-image {
+.event_img {
     width: 100%;
     display: block;
 }
 
-.event-info {
+.event_navn {
     position: absolute;
     top: 0;
     left: 0;
@@ -130,13 +46,13 @@ h1 { /* EVENTS titel */
     padding: 20px;
 }
 
-.event-info h2 { 
+.event_navn h2 { 
     text-transform: uppercase;
     margin: 0;
     font-size: 1em;
 }
 
-.event-dato-pris {
+.event_info {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -147,25 +63,29 @@ h1 { /* EVENTS titel */
     padding: 8px;
 }
 
-.event-dato-pris, #dato, #pris {
+.event_info, #dato, #pris {
     font-size: smaller;
 }
 
-.event-dato, #dato {
-    font-weight: 600;
+.event_info, #dato {
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-/*-- FADE IN SCROLL EFFEKT -- */
-
-.event-kort {
-    opacity: 0; /* EVENT-KORT BLIVER SKJULT */
-    transform: translateY(20px); /* DEN BEVÆGER EN SMULE NED */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+/* Til fadeIn i JS */
+.event_boks_mobil2{
+    transition: all 1.5s;
+    opacity: 0;
 }
 
-.event-kort.visning {
-    opacity: 1; /* EVENT-KORT BLIVER VIST */
-    transform: translateY(0); /* BEVÆGER SIG TIL DEN ORIGINALE POSITION */
+.event_boks_mobil3{
+    transition: all 1.5s;
+    opacity: 0;
+}
+
+.event_boks_mobil4{
+    transition: all 1.5s;
+    opacity: 0;
 }
 
 /* -------------------- 
@@ -173,7 +93,7 @@ h1 { /* EVENTS titel */
 -------------------- */
 
 @media screen and (min-width: 768px) {
-    .event-container {
+    .event_container {
         grid-template-columns: 30% 30% 30%;
         justify-content: center;
         gap: 2.5em;
@@ -190,13 +110,13 @@ h1 { /* EVENTS titel */
         text-align: center;
     }
 
-    .event-kort:hover {
+    .event_boks:hover {
         transform: scale(1.05); /* DETTE FORSTØRRE KORT VED HOVER */
         box-shadow: 0 4px 8px var(--morkblaa); /* GØR SKYGGEN MØRKERE OG STØRRE */
         transition: 0.5s ease-in-out; /*SÆTTER EN SMOOTH TRANSITION DER VARER 0.5 s */
     }
 
-    .event-info {
+    .event_navn {
         position: absolute;
         top: 0;
         left: 0;
@@ -216,83 +136,7 @@ h1 { /* EVENTS titel */
 
 
 @media screen and (min-width: 1024px) {
-    /* -------------------- 
-    --------- MENU --------
-    ----------------------- */
-    .navbar {
-        height: 5em;
-        position: sticky;
-        box-shadow: 0 1.5em 2em #00000020;
-    }
-
-    #menu {
-        display: flex;
-        position: static;
-        width: auto;
-        gap: 3rem;
-        padding: 0 7em 0 0;
-    }
-
-    #menu.aktiv { /* Til js */
-        display: flex;
-    }
-
-    .menupunkt {
-        border-top: none;
-        padding: 0;
-        font-size: 0.9em;
-        display: block;
-    }
-
-    .submenu {
-        display: block;
-    }
-
-    .submenu i {
-        padding-left: 0.7em;
-    }
-
-    .menupunkt:hover {
-        cursor: pointer;
-    }
-
-    .dropdown {
-        position: absolute;
-        background-color: var(--cyanblaa);
-        padding: 2em 1em 1.5em 1em;
-        border-radius: 0.2em;
-        width: 12em;
-        box-shadow: 0 1.5em 2em #00000020;
-        z-index: -999;
-        margin-left: -1em;
-        transition: all ease 0.5s;
-        display: none;
-    }
-
-    .submenu:hover .dropdown {
-        display: block;
-        margin-top: 0;
-    }
-
-    .underpunkt {
-        padding: 1em 0 0.2em 0;
-        border-bottom: solid 1px var(--lyssand);
-    }
-
-    .underpunkt:nth-child(1) {
-        border-top: solid 1px var(--lyssand);
-    }
-
-    #burger {
-        display: none;
-    }
-
-    .logo_nav {
-        width: 6em;
-        margin: 0 0 -3em 2em;
-    }
-
-    .event-container{
+    .event_container{
     margin-bottom: 4em;
     }
 }
