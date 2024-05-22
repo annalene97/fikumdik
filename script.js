@@ -36,7 +36,7 @@ menupunktListe.forEach(menupunkt => {
             } // Hvis det er sandt, at, submenuen er synlig (block), ændres værdien til 'none'; ellers ændres værdien til 'block'
             
             // Her ændrer vi classen på pilene, der indikerer, hvorvidt dropdown-menuen er åben eller ej
-            const ikon = menupunkt.querySelector('i'); //Her finder vi i-elementet nested i hvert menupunkt (undtagen Events)
+            const ikon = menupunkt.querySelector('i'); //Her finder vi i-elementet nested i menupunktet
             if (erAaben) {
                 ikon.classList.remove('fa-chevron-up');
                 ikon.classList.add('fa-chevron-down');
