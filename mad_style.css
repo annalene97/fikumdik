@@ -18,6 +18,7 @@
 }
 
 /* Modal knapper flexbox */
+/* Her har vi anvendt ChatGPT til at lave en simpel flexbox med 4 item i row, ved at spørge: "can you make me a flexbox with 4 items in a row?" (se bilag i rapporten) */
 .mad_modalknapper {
     display: flex;
     flex-direction: column;
@@ -94,6 +95,7 @@
 }
 
 /* Luk kaffe modal knap */
+/* Her har vi anvendt ChatGPT til at få lukknappen (x) til at overlay billedet i modalerne (se bilag i rapporten) */
 #lukknap_kaffe_modal {
     color: var(--morkblaa);
     font-size: 300%; /* størrelsen på lukknap (x) */
