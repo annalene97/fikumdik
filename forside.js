@@ -13,8 +13,8 @@ const karrusel = () => {
     //Ønsket var at karrusellen kun rykkede ét billede ad gangen. Dette er dog ikke lykkes med denne kode. Dertil ønskede vi, at karrusellen var uendelig (looped)
     karruselKnapper.forEach(knap => {
         knap.addEventListener("click", () => {
-            const retning = knap.id === "forside_venstreknap" ? -1 : 1;
-            const scrollMaengde = karruselIndhold.clientWidth * retning;
+            const retning = knap.id === "forside_venstreknap" ? -1 : 1; //Her tjekker scriptet om knappen indeholder id'et "forside_venstreknap". Hvis den gør det sættes værdien af retning til -1, hvis ikke id'et er tilstede, sættes værdien til 1
+            const scrollMaengde = karruselIndhold.clientWidth * retning; //clientWidth bruges for at vide hvor lang karrusellens indhold er. 
             karruselIndhold.scrollBy({ left: scrollMaengde, behavior: "smooth"});
         });
     });
