@@ -1,0 +1,141 @@
+
+#h1_fejl{
+    margin-top: 2em;
+    text-align: center;
+}
+
+.h4_fejl {
+text-align: center;
+margin-top: 1.5em;
+}
+
+.knap-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 3em;
+    text-decoration: none;
+    color: var(--lyssand);
+}
+
+.knap-container a {
+    text-decoration: none;
+    color: var(--lyssand);
+}
+
+.fejl_element_knap{
+    padding: 0.6em 1.7em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--roed);
+    font-family: 'Jost';
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--lyssand);
+    box-shadow: 3px 3px 6px #000000a3;
+    transition: ease-in-out .5s;
+    cursor: pointer;
+    margin-bottom: 2em;
+}
+
+
+
+.tegning-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#kaffebonner {
+    display: none;
+}
+
+#lanestol {
+    width: 15em;
+    margin-top: 4em;
+}
+
+@media screen and (min-width: 1024px) {
+    /* -------------------- 
+    --------- MENU --------
+    ----------------------- */
+    .navbar {
+        height: 5em;
+        position: sticky;
+        box-shadow: 0 1.5em 2em #00000020;
+    }
+
+    #menu {
+        display: flex;
+        position: static;
+        width: auto;
+        gap: 3rem;
+        padding: 0 7em 0 0;
+    }
+
+    #menu.aktiv { /* Til js */
+        display: flex;
+    }
+
+    .menupunkt {
+        border-top: none;
+        padding: 0;
+        font-size: 0.9em;
+        display: block;
+    }
+
+    .submenu {
+        display: block;
+    }
+
+    .submenu i {
+        padding-left: 0.7em;
+    }
+
+    .menupunkt:hover {
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: absolute;
+        background-color: var(--cyanblaa);
+        padding: 2em 1em 1.5em 1em;
+        border-radius: 0.2em;
+        width: 12em;
+        box-shadow: 0 1.5em 2em #00000020;
+        z-index: -999;
+        margin-left: -1em;
+        transition: all ease 0.5s;
+        display: none;
+    }
+
+    .submenu:hover .dropdown {
+        display: block;
+        margin-top: 0;
+    }
+
+    .underpunkt {
+        padding: 1em 0 0.2em 0;
+        border-bottom: solid 1px var(--lyssand);
+    }
+
+    .underpunkt:nth-child(1) {
+        border-top: solid 1px var(--lyssand);
+    }
+
+    #burger {
+        display: none;
+    }
+
+    .logo_nav {
+        width: 6em;
+        margin: 0 0 -3em 2em;
+    }
+}
+
+/*body {
+    background-image: url(/img/illustrations/kopperstack.png);
+    opacity: 1.5;
+    background-repeat: repeat;
+    background-size: contain;
+}

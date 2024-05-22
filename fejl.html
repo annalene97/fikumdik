@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 fejl</title>
+    <title>404 Fejl</title>
 
     <!-- Favikon -->
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
@@ -13,11 +13,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style_fejl.css">
+    <link rel="stylesheet" href="fejl.css">
 
     <!-- Javascript -->
     <script defer src="script.js"></script>
@@ -71,13 +71,13 @@
         <h4 class="h4_fejl">Du er lidt for tidlig på den.
         Kaffen er ikke brygget færdig endnu
         <br>
-        Tag et hvil her eller klik</h4>
+        Tag et hvil her eller klik på</h4>
 
-        <div class="knap-container"><button class="fejl_element_knap">Tilbage til forsiden</button></div>
+        <div class="knap-container"><button class="fejl_element_knap"><a href="index.html">Tilbage til forsiden</a></button></div>
     
-        <div>
-            <img src="img/illustrations/chesterfield.png" alt="Illustration af stol">
-            <img src="img/illustrations/kaffe.png" alt="Illustration af kaffe">
+        <div class="tegning-container">
+            <img src="img/illustrations/kaffe.png" alt="Illustration af kaffe" id="kaffebonner">
+            <img src="img/illustrations/chesterfield.png" alt="Illustration af stol" id="lanestol">
         </div>
     </main>
 </body>
