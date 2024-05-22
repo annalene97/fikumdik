@@ -20,7 +20,7 @@ const karrusel = () => {
     });
 }
 
-window.addEventListener("load", karrusel); // Karrusellen starter, når siden indlæses
+window.addEventListener("load", karrusel); // Karrusellen starter, når siden loades
 
 
 /* FAQ */
