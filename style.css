@@ -167,7 +167,21 @@ ul {
 }
 
 
+/* -------------------- 
+------- FOOTER -------
+-------------------- */
+footer {
+    background-color: var(--cyanblaa);
+    
+}
 
+footer p, h4, .footer_kontakt a {
+    color: var(--lyssand);
+}
+
+footer h4 {
+    font-weight: 500;
+}
 
 
 
