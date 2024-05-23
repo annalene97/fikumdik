@@ -33,6 +33,8 @@ body {
     background-color: var(--lyssand);
     color: var(--morkblaa);
     font-family: "Jost", sans-serif;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 h1 { /* Bruges til over-overskrift */
