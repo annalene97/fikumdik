@@ -1331,7 +1331,7 @@ footer h4 {
     }
 
     .bestil_knap {
-        margin: 1.5em 0;
+        margin: 1.5em 0 0;
     }
     
     #kunstner_plek {
@@ -1349,6 +1349,7 @@ footer h4 {
     #kunstner_viser {
         width: 350px;
         height: auto;
+        margin-top:0;
     }
     
     
@@ -1362,6 +1363,8 @@ footer h4 {
         margin: 5em 10em;
         border-radius: 10px;
     }
+
+
     
 
     /* -------------------- 
