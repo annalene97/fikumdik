@@ -665,7 +665,7 @@ main {
     color: var(--lyssand);
     display: flex;
     justify-content: space-between;
-    padding: 8%;
+    padding: 5%;
 }
 
 .event_info, .dato, .pris {
