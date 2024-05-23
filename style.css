@@ -804,6 +804,22 @@ color: black;
     display: inline-block;
 }
 
+.bestil_knap{
+    padding: 0.6em 1.7em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--roed);
+    font-family: 'Jost';
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--lyssand);
+    box-shadow: 3px 3px 6px #000000a3;
+    transition: ease-in-out .5s;
+    cursor: pointer;
+    margin: 2em auto 3.5em;
+    display: block;
+}
+
 .illustration_container {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -1312,6 +1328,10 @@ footer h4 {
 
     .kunstner_dot2 {
         margin: 0.5em;
+    }
+
+    .bestil_knap {
+        margin: 1.5em 0;
     }
     
     #kunstner_plek {
