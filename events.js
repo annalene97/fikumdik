@@ -26,10 +26,3 @@ function fadeInEventBoks(elements) {
         }
     }
 }
-
-
-
-
-
-
-

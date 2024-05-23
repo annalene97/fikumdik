@@ -20,7 +20,7 @@ function menuAktiv () {
     }
 }
 
-// Visning af dropdown
+// Visning af dropdown med hjælp fra chatGPT
 menupunktListe.forEach(menupunkt => { 
     menupunkt.addEventListener('click', () => { // Vi sætter eventlistener på hvert menupunkt, der lytter efter klik
         const aktivDropdown = menupunkt.querySelector('.dropdown'); //Her henter vi dropdown-menuen under menupunktet og kalder den "aktivDropdown"
@@ -28,7 +28,7 @@ menupunktListe.forEach(menupunkt => {
             const erAaben = aktivDropdown.style.display === 'block'; //Her tjekker scriptet, om aktivDropdown har display: 'block', og dermed er synlig/åben. Hvis det er tilfældet bliver erAabens værdi 'true'
             
             lukAndreSubmenuer(aktivDropdown); //lukAndreSubmenuer-funktionen igangsættes
-            
+
             if (erAaben) {
                 aktivDropdown.style.display ='none'
             } else {
@@ -48,7 +48,7 @@ menupunktListe.forEach(menupunkt => {
     });
 });
 
-            // Her sikrer vi os, at de andre submenu er lukkede, så snart én submenu åbnes
+            // Her sikrer vi os, at de andre submenu er lukkede, så snart én submenu åbnes - med hjælp fra chatGPT
             function lukAndreSubmenuer(aktivDropdown) { 
                 const dropdowns = document.querySelectorAll('.dropdown');
                 dropdowns.forEach(dropdown => { 
