@@ -18,7 +18,7 @@ function fadeInd(){
 function fadeInEventBoks(elements) {
     for (let i = 0; i < elements.length; i++) {
         let element = elements[i];
-        let element_info = element.getBoundingClientRect(); // for hvert plads i for-loopet får elementet placering ift. viewport
+        let element_info = element.getBoundingClientRect(); // for hvert plads i for-loopet får funktionen elementets placering ift. viewport
 
         // Hvis topplaceringen er mindre end vinduets højde minus 250 (for at kunne se rækkerne fade ind, skal opacity sættes til 1)
         if (element_info.top < window.innerHeight - 250) {
